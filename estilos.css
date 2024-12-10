@@ -155,6 +155,11 @@ header {
     gap: 30px;
 }
 
+.main-header img {
+    height: auto;
+    width: 200px; /* O el ancho que prefieras */
+}
+
 .card {
     background-color: white;
     padding: 30px;
