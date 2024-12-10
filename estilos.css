@@ -148,12 +148,13 @@
     /* Info Cards Section */
     .info-cards {
         background-color: var(--primary-light);
-        padding: 150px;
+        padding: 100px;
         color: white;
         display: grid;
         grid-template-columns: repeat(2, 1fr) 2fr;
         grid-template-rows: auto auto;
-        gap: 30px;
+        column-gap: 100px; /* Espacio horizontal más grande */
+        row-gap: 30px;  
         grid-template-areas: 
             "programa consejo reuniones"
             "stats stats reuniones";
@@ -291,8 +292,12 @@
     }
 
     .reuniones {
-        padding: 20px;
-        border: 3px solid white;  /* grosor estilo color */
+        grid-area: reuniones;
+        background-color: rgba(255, 255, 255, 0.1);
+        padding: 30px;
+        border-radius: 5px;
+        border: 3px solid white;
+        margin-left: 30px; /* Añade espacio adicional a la izquierda */
     }
 
     .reuniones h4 {
@@ -323,6 +328,8 @@
         display: flex;
         align-items: center;
         margin-bottom: 1.5rem;
+        cursor: pointer; /* Añadir cursor pointer para indicar que es clickeable */
+        transition: background-color 0.3s ease; /* Transición suave para el hover */
     }
 
     /* Estilos para el ícono */
@@ -360,6 +367,35 @@
         color: #1d4d25;
         margin: 0;
         font-size: 0.9rem;
+    }
+
+    /* Estilos para el contenedor del enlace */
+    .location a {
+        text-decoration: none; /* Remover el subrayado del enlace */
+        display: block; /* Hacer que el enlace ocupe todo el espacio disponible */
+        width: 100%; /* Asegurar que el enlace tome todo el ancho */
+    }
+
+    /* Efecto hover para mejorar la interactividad */
+    .info_ubicacion:hover {
+        background-color: #dcdcdc; /* Cambio sutil de color al pasar el mouse */
+    }
+
+    /* Cambio de color del SVG en hover usando filtro para convertir a rojo */
+    .info_ubicacion:hover img {
+        filter: brightness(0) saturate(100%) invert(19%) sepia(99%) saturate(7154%) hue-rotate(358deg) brightness(95%) contrast(118%);
+    }
+
+    /* Asegurar que el texto dentro del enlace no tenga decoración */
+    .location a:hover,
+    .location a:focus,
+    .location a:active {
+        text-decoration: none;
+    }
+
+    /* Mantener el color del texto consistente */
+    .location a p {
+        color: #1d4d25 !important; /* Forzar el color del texto */
     }
 
     /* Program Cards */
