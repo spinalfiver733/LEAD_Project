@@ -335,6 +335,34 @@ header {
     margin: 0 auto;
 }
 
+.footer-bottom {
+    background-color: #286217;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer-bottom .institution p {
+    margin: 0;
+    font-style: italic;
+}
+
+.footer-bottom .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-bottom .footer-nav li {
+    cursor: pointer;
+}
+
+
 /* CTA Section */
 .cta {
     background-color: var(--primary-light);
@@ -348,6 +376,72 @@ header {
     margin-top: 20px;
 }
 
+
+.road-hero {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    background-image: url('assets/fondo_carretera.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.text-container {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 4rem 4rem;
+    border-radius: 10px;
+    max-width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.text-container p {
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 auto; /* Centrado horizontal */
+    flex: 1;
+    line-height: 1.3;
+    text-align-last: center; /* Hace que la última línea también esté centrada */
+    text-align: justify;
+    -moz-text-align-last: center; /* Para Firefox */
+    text-justify: distribute; /* Distribuye el espacio uniformemente */
+}
+
+.lead-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.circle-button {
+    background: white;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-bottom: 1rem; /* Espacio entre el círculo y el texto */
+}
+
+.lead-button span {
+    color: white; /* Color blanco para el texto */
+    font-size: 0.8rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.play-icon {
+    color: #1d4d25;
+    font-size: 2.5rem;
+}
 /* Footer */
 footer {
     background-color: var(--primary-dark);
@@ -370,8 +464,38 @@ footer {
     margin-bottom: 10px;
 }
 
+/* Estilos para los títulos en la sección de contacto */
+.contact h4 {
+    color: white;
+    margin-bottom: 1rem;
+}
+
+/* Estilos para los títulos internos */
+.contact p strong, 
+.contact .title {
+    color: white;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+/* Estilos para la información con opacidad */
 .contact p {
-    margin: 5px 0;
+    color: rgba(255, 255, 255, 0.7); /* Texto semi-transparente */
+    margin-bottom: 1rem;
+    line-height: 1.5;
+}
+
+/* Ajuste específico para el correo */
+.contact p a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+/* Para asegurar que los saltos de línea funcionen correctamente */
+.contact br {
+    display: block;
+    content: "";
+    margin-top: 0.5rem;
 }
 
 .history-cta {
