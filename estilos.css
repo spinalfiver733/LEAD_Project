@@ -202,6 +202,19 @@ header {
     list-style: none;
 }
 
+
+.map {
+    width: 100%;
+    height: 300px;
+    margin-top: 15px;
+}
+
+.map iframe {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
 /* Program Cards */
 .program-cards {
     display: grid;
