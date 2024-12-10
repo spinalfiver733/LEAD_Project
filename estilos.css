@@ -245,6 +245,34 @@ header {
     padding: 10px;
 }
 
+.top-nav ul li input[type="search"] {
+    background-color: var(--primary-light);
+}
+
+.search-container input::-webkit-input-placeholder { /* Chrome/Safari/Opera */
+    color: white;
+}
+.search-container input::-moz-placeholder { /* Firefox */
+    color: white;
+}
+.search-container input:-ms-input-placeholder { /* IE/Edge */
+    color: white;
+}
+
+.search-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    width: 16px;
+    height: 16px;
+    transform: scaleX(-1);
+}
+
 /* History Section */
 .history {
     background-image: url('background.jpg');
