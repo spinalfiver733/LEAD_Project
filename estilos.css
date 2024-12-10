@@ -148,7 +148,7 @@
     /* Info Cards Section */
     .info-cards {
         background-color: var(--primary-light);
-        padding: 50px;
+        padding: 150px;
         color: white;
         display: grid;
         grid-template-columns: repeat(2, 1fr) 2fr;
