@@ -215,6 +215,52 @@ header {
     border-radius: 5px;
 }
 
+.info_ubicacion {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para el ícono */
+.info_ubicacion img {
+    width: 48px;
+    height: 48px;
+    margin-right: 1rem;
+}
+
+/* Estilos para el texto */
+.info_ubicacion p {
+    color: #1d4d25;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.info_ubicacion {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+/* Estilos para el ícono */
+.info_ubicacion img {
+    width: 48px;  /* Ancho del ícono */
+    height: 48px; /* Alto del ícono */
+    margin-right: 1rem;
+}
+
+/* Estilos para el texto */
+.info_ubicacion p {
+    color: #1d4d25;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
 /* Program Cards */
 .program-cards {
     display: grid;
