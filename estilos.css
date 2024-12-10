@@ -599,27 +599,11 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
+        /* Navegación */
         .top-nav ul,
         .main-nav ul {
             flex-direction: column;
             gap: 10px;
-        }
-    
-        .info-cards {
-            grid-template-columns: 1fr;
-            grid-template-areas: 
-                "programa"
-                "consejo"
-                "stats"
-                "reuniones";
-        }
-    
-        .program-cards {
-            grid-template-columns: 1fr;
-        }
-    
-        .footer-content {
-            grid-template-columns: 1fr;
         }
     
         .main-header {
@@ -627,24 +611,95 @@
             text-align: center;
         }
     
+        /* Info Cards Section */
+        .info-cards {
+            padding: 2rem;
+            gap: 2rem;
+            grid-template-columns: 1fr;
+            grid-template-areas: 
+                "programa"
+                "consejo"
+                "stats"
+                "reuniones";
+            justify-items: center;
+        }
+    
+        /* Cards */
+        .info-cards .card {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+    
+        /* Stats */
+        .stats {
+            width: 100%;
+            max-width: 300px;
+            margin: 0 auto;
+            padding-top: 2rem;
+        }
+    
+        .numbers {
+            display: flex;
+            justify-content: space-between;
+            gap: 1rem;
+            flex-wrap: nowrap;
+        }
+    
+        .numbers span {
+            text-align: center;
+            flex: 1;
+        }
+    
+        .numbers h2 {
+            font-size: 1.5em;
+        }
+    
+        /* Reuniones */
+        .reuniones {
+            width: 100%;
+            max-width: 300px;
+            margin: 1rem auto 0;
+            padding: 1.5rem;
+        }
+    
+        .reuniones h3 {
+            font-size: 1.2em;
+            text-align: center;
+        }
+    
+        .reuniones li {
+            font-size: 0.9em;
+            margin: 1rem 0;
+        }
+    
+        /* Program Cards */
+        .program-cards {
+            grid-template-columns: 1fr;
+        }
+    
+        /* Footer */
+        .footer-content {
+            grid-template-columns: 1fr;
+        }
+    
+        /* Image Grid */
         .image-grid {
             grid-template-columns: repeat(2, 1fr);
         }
     
+        /* Text Container */
         .text-container {
             padding: 1.5rem;
             width: 95%;
             gap: 1rem;
         }
-        
+    
+        /* Circle Button */
         .circle-button {
             width: 80px;
             height: 80px;
-        }
-    
-        .numbers {
-            gap: 20px;
-            flex-wrap: wrap;
         }
     }
 
