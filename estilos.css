@@ -219,8 +219,8 @@ header {
 .program-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 50px;
+    gap: 10px;
+    padding: 5px;
 }
 
 .program-cards .card {
@@ -231,7 +231,7 @@ header {
 
 .program-cards img {
     width: 100%;
-    height: 250px;
+    height: 350px;
     object-fit: cover;
 }
 
