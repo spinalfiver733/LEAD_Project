@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEAD México</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .mediateka-container {
+            padding: 2rem;
+            background-color: #f8f9fa;
+        }
+
+        .section-title {
+            color: #1d4d25;
+            margin-bottom: 2rem;
+            text-align: center;
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        .carousel {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 3rem;
+        }
+
+        .carousel-item img {
+            height: 400px;
+            object-fit: cover;
+        }
+
+        /* Para hacer las flechas verdes y más gruesas */
+        .carousel-control-prev-icon,
+        .carousel-control-next-icon {
+            background-color: #1d4d25; /* El verde institucional */
+            padding: 25px; /* Aumenta el tamaño */
+            border-radius: 50%; /* Hace el fondo circular */
+            background-size: 50% 50%; /* Ajusta el tamaño del icono dentro del círculo */
+        }
+
+        /* Opcional: si quieres hacer el contenedor de las flechas más grande */
+        .carousel-control-prev,
+        .carousel-control-next {
+            width: 10%; /* Aumenta el área clickeable */
+        }
+
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%;
+            height: 0;
+            overflow: hidden;
+        }
+
+        .video-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tab-content {
+            margin-top: 2rem;
+        }
+
+        .pdf-card {
+            transition: transform 0.2s;
+        }
+
+        .pdf-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .nav-tabs .nav-link {
+            color: #1d4d25;
+        }
+
+        /* Color para la tab activa */
+        .nav-tabs .nav-link.active {
+            background-color: #5cb439;
+            color: white;
+            border-color: #5cb439;
+        }
+
+        /* Hover efecto para las tabs */
+        .nav-tabs .nav-link:hover {
+            border-color: #5cb439;
+            color: #5cb439;
+        }
+
+        /* Para mantener el color blanco del texto cuando está activo incluso al hover */
+        .nav-tabs .nav-link.active:hover {
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="top-nav">
+            <ul>
+                <li><a href="index.html">INICIO</a></li>
+                <li>APLICAR</li>
+                <li >VISITAR</li>
+                <li>ESTUDIANTES</li>
+                <li>PROFESORADO</li>
+                <li>EVALUAMOS</li>
+                <li>
+                    <div class="search-container">
+                        <input type="search" placeholder="Buscar...">
+                        <img src="assets/busqueda-de-lupa.svg" alt="buscar" class="search-icon">
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <div class="main-header">
+            <div class="logo-container">
+                <h1>LEAD México</h1>
+                <h2><p>Inspiring leadership for a sustainable world</p></h2>
+            </div>
+            <img class="main-header"  src="assets/LogoLEAD.webp" alt="LEAD logo">
+        </div>
+      
+        <nav class="main-nav">
+            <ul>
+                <li><strong>¿Qué es Lead?</strong></li>
+                <li><strong>Consejo Directivo</strong></li>
+                <li><strong>Staff</strong></li>
+                <li><strong>LEAD México</strong></li>
+                <li><strong>Publicaciones</strong></li>
+                <li><strong>Asociados</strong></li>
+                <li><strong>Solicitud de ingreso</strong></li>
+                <li><strong>Mediateca</strong></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        
+        <body>
+            <div class="mediateka-container">
+                <h2 class="section-title">Mediateka LEAD México</h2>
+                
+                <!-- Pestañas de navegación -->
+                <ul class="nav nav-tabs" id="mediatekaTab" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#fotos" type="button">Galería de Fotos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#videos" type="button">Videos</button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#documentos" type="button">Documentos</button>
+                    </li>
+                </ul>
+        
+                <div class="tab-content" id="mediatekaTabContent">
+                    <!-- Sección de Fotos -->
+                    <div class="tab-pane fade show active" id="fotos">
+                        <div id="carouselFotos" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img src="assets/img_mediateka/20anios1.jpg" class="d-block w-100" alt="Reunión LEAD 2023">
+                                    <div class="carousel-caption">
+                                        <h5>Reunión Internacional 2023</h5>
+                                        <p>Discusión sobre sostenibilidad global</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img_mediateka/convocatoria-2020.jpg" class="d-block w-100" alt="Taller LEAD">
+                                    <div class="carousel-caption">
+                                        <h5>Taller de Liderazgo Ambiental</h5>
+                                        <p>Participantes de toda Latinoamérica</p>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <img src="assets/img_mediateka/convocatoria-2021.jpg" class="d-block w-100" alt="Conferencia">
+                                    <div class="carousel-caption">
+                                        <h5>Conferencia Anual</h5>
+                                        <p>Presentación de proyectos sustentables</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotos" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFotos" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <!-- Sección de Videos -->
+                    <div class="tab-pane fade" id="videos">
+                        <div id="carouselVideos" class="carousel slide">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="video-container">
+                                        <img src="assets/videoMediateka/COSTA RICA IN 4K 60fps HDR (ULTRA HD).mp4" alt="Video 1">
+                                        <div class="carousel-caption">
+                                            <h5>Impacto del Cambio Climático</h5>
+                                            <p>Investigación y resultados 2023</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="video-container">
+                                        <img src="/api/placeholder/800/400" alt="Video 2">
+                                        <div class="carousel-caption">
+                                            <h5>Desarrollo Sustentable</h5>
+                                            <p>Proyectos exitosos en México</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideos" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon"></span>
+                            </button>
+                            <button class="carousel-control-next" type="button" data-bs-target="#carouselVideos" data-bs-slide="next">
+                                <span class="carousel-control-next-icon"></span>
+                            </button>
+                        </div>
+                    </div>
+        
+                    <!-- Sección de Documentos -->
+                    <div class="tab-pane fade" id="documentos">
+                        <div class="row row-cols-1 row-cols-md-3 g-4">
+                            <div class="col">
+                                <div class="card h-100 pdf-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Reporte Anual 2023</h5>
+                                        <p class="card-text">Resultados y logros del programa LEAD México</p>
+                                        <a href="#" class="btn btn-success">Descargar PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 pdf-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Guía de Sostenibilidad</h5>
+                                        <p class="card-text">Manual práctico para líderes ambientales</p>
+                                        <a href="#" class="btn btn-success">Descargar PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="card h-100 pdf-card">
+                                    <div class="card-body">
+                                        <h5 class="card-title">Investigación 2023</h5>
+                                        <p class="card-text">Estudios sobre cambio climático en México</p>
+                                        <a href="#" class="btn btn-success">Descargar PDF</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <!-- Bootstrap JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+        </body>
+
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <div class="lead-international">
+                <div class="section-header">
+                    <h4>LEAD INTERNATIONAL</h4>
+                    <div class="arrow"></div>
+                </div>
+                <div class="section-content">
+                    <ul>
+                        <li>África francófona</li>
+                        <li>Brasil</li>
+                        <li>Canadá</li>
+                        <li>China</li>
+                        <li>CIS</li>
+                        <li>Europa</li>
+                        <li>India</li>
+                        <li>Indonesia</li>
+                        <li>Japón</li>
+                        <li>Nigeria</li>
+                        <li>Pakistán</li>
+                        <li>Sudáfrica</li>
+                    </ul>
+                </div>
+            </div>
+    
+            <div class="contact">
+                <div class="section-header">
+                    <h4>CONTACTO</h4>
+                    <div class="arrow"></div>
+                </div>
+                <div class="section-content">
+                    <p><strong>Teléfono:</strong><br>
+                    +52 55-54-58-30-00</p>
+                    <p><strong>Extensiones:</strong><br>3072, 3092, 4173</p>
+                    <p><strong>Apartado postal</strong><br>20671</p>
+                    <p><strong>Mail</strong><br>
+                        Prof. Boris Graizbord<br>
+                        Coordinador del Programa De Estudios Avanzados En
+                        Desarrollo Sustentable Y Medio Ambiente, Lead-méxico<br>
+                    <a href="mailto:leadmex@lead.colmex.mx">leadmex@lead.colmex.mx</a></p>
+                </div>
+            </div>
+    
+            <!-- Location section remains unchanged -->
+            <div class="location">
+                <h4>UBICACIÓN</h4>
+                <a href="https://www.google.com/maps/place/El+Colegio+de+M%C3%A9xico/@19.3038047,-99.2098976,17z/data=!3m1!4b1!4m6!3m5!1s0x85ce017458913985:0xa6be0527e2998dd8!8m2!3d19.3037997!4d-99.207328!16zL20vMDR4dDk3?entry=ttu&g_ep=EgoyMDI0MTIwNC4wIKXMDSoASAFQAw%3D%3D" target="_blank">
+                    <div class="info_ubicacion">
+                        <img src="assets/ubicacion.svg" alt="Ubicación" style="margin-right: 1rem;">
+                        <p style="color: #1d4d25; margin: 0; font-size: 0.9rem;">
+                            Carretera Picacho Ajusco 20, Col. Ampliación Fuentes Del Pedregal, C.p. 14110 Tlalpan, Ciudad De México
+                        </p>
+                    </div>
+                </a>
+
+                <div class="map">
+                    <iframe 
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3765.5533844307707!2d-99.20323632559423!3d19.303421981970825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cdff8c11cb0fb7%3A0x86e5c138ebddf0f6!2sCarretera%20Picacho%20Ajusco%2020%2C%20Ampliaci%C3%B3n%20Fuentes%20del%20Pedregal%2C%20Tlalpan%2C%2014110%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1702166029113!5m2!1ses!2smx" 
+                        width="100%" 
+                        height="300" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy" 
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="footer-bottom">
+            <div class="institution">
+                <p>El Colegio de México, A.C.</p>
+            </div>
+            <nav class="footer-nav">
+                <ul>
+                    <li>Ciudad de México</li>
+                    <li>Aviso de privacidad</li>
+                    <li>Copyright</li>
+                    <li>Mapa del sitio</li>
+                    <li>Cómo llegar</li>
+                </ul>
+            </nav>
+        </div>
+    </footer>
+</body>
+</html>
