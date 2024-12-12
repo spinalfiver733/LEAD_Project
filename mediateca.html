@@ -13,6 +13,71 @@
             background-color: #f8f9fa;
         }
 
+        .mediateka-content {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            min-height: 500px; /* Altura mínima para mantener consistencia */
+        }
+
+        .content-list {
+            flex: 1;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            max-height: 500px;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #1d4d25 #f0f0f0;
+        }
+
+        /* Estilos para la barra de desplazamiento en navegadores WebKit */
+        .content-list::-webkit-scrollbar {
+            width: 8px;
+        }
+
+        .content-list::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+
+        .content-list::-webkit-scrollbar-thumb {
+            background-color: #1d4d25;
+            border-radius: 4px;
+        }
+
+        .content-list h3 {
+            color: #1d4d25;
+            margin-bottom: 1rem;
+        }
+
+        .content-list ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-list li {
+            padding: 0.75rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .carousel-container {
+            flex: 2;
+            height: 500px; 
+        }
+
+        .content-list li:hover {
+            background-color: #f0f8f1;
+        }
+
+        .content-list li.active {
+            background-color: #1d4d25;
+            color: white;
+        }
+
         .section-title {
             color: #1d4d25;
             margin-bottom: 2rem;
@@ -26,6 +91,7 @@
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 3rem;
+            height: 100%;
         }
 
         .carousel-item img {
@@ -45,7 +111,8 @@
         /* Opcional: si quieres hacer el contenedor de las flechas más grande */
         .carousel-control-prev,
         .carousel-control-next {
-            width: 10%; /* Aumenta el área clickeable */
+            width: 10%;
+            z-index: 5;
         }
 
         .video-container {
@@ -65,7 +132,8 @@
         }
 
         .tab-content {
-            margin-top: 2rem;
+            margin-top: 1rem;
+
         }
 
         .pdf-card {
@@ -78,6 +146,8 @@
 
         .nav-tabs .nav-link {
             color: #1d4d25;
+            cursor: pointer;
+            user-select: none;
         }
 
         /* Color para la tab activa */
@@ -141,119 +211,177 @@
     </header>
 
     <main>
-        
-        <body>
-            <div class="mediateka-container">
-                <h2 class="section-title">Mediateka LEAD México</h2>
-                
-                <!-- Pestañas de navegación -->
-                <ul class="nav nav-tabs" id="mediatekaTab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#fotos" type="button">Galería de Fotos</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#videos" type="button">Videos</button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#documentos" type="button">Documentos</button>
-                    </li>
-                </ul>
-        
-                <div class="tab-content" id="mediatekaTabContent">
-                    <!-- Sección de Fotos -->
-                    <div class="tab-pane fade show active" id="fotos">
-                        <div id="carouselFotos" class="carousel slide">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <img src="assets/img_mediateka/20anios1.jpg" class="d-block w-100" alt="Reunión LEAD 2023">
-                                    <div class="carousel-caption">
-                                        <h5>Reunión Internacional 2023</h5>
-                                        <p>Discusión sobre sostenibilidad global</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="assets/img_mediateka/convocatoria-2020.jpg" class="d-block w-100" alt="Taller LEAD">
-                                    <div class="carousel-caption">
-                                        <h5>Taller de Liderazgo Ambiental</h5>
-                                        <p>Participantes de toda Latinoamérica</p>
-                                    </div>
-                                </div>
-                                <div class="carousel-item">
-                                    <img src="assets/img_mediateka/convocatoria-2021.jpg" class="d-block w-100" alt="Conferencia">
-                                    <div class="carousel-caption">
-                                        <h5>Conferencia Anual</h5>
-                                        <p>Presentación de proyectos sustentables</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotos" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselFotos" data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
+        <div class="mediateka-container">
+            <h2 class="section-title">Mediateca LEAD México</h2>
+            
+            <ul class="nav nav-tabs" id="mediatekaTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#fotos" type="button">Galería de Fotos</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#videos" type="button">Videos</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#documentos" type="button">Documentos</button>
+                </li>
+            </ul>
+
+            <div class="tab-content" id="mediatekaTabContent">
+                <!-- Sección de Fotos -->
+                <div class="tab-pane fade show active" id="fotos">
+                    <div class="mediateka-content">
+                        <!-- Lista lateral de fotos -->
+                        <div class="content-list">
+                            <h3>Galería Completa</h3>
+                            <ul>
+                                <li class="active">Reunión Internacional 2023</li>
+                                <li>Taller de Liderazgo Ambiental</li>
+                                <li>Conferencia Anual</li>
+                                <li>Seminario de Desarrollo Sustentable</li>
+                                <li>Congreso Latinoamericano 2023</li>
+                                <li>Encuentro de Expertos</li>
+                                <li>Proyectos Comunitarios</li>
+                                <li>Capacitación Regional</li>
+                                <li>Foro de Innovación</li>
+                                <li>Workshop Internacional</li>
+                            </ul>
                         </div>
-                    </div>
-        
-                    <!-- Sección de Videos -->
-                    <div class="tab-pane fade" id="videos">
-                        <div id="carouselVideos" class="carousel slide">
-                            <div class="carousel-inner">
-                                <div class="carousel-item active">
-                                    <div class="video-container">
-                                        <img src="assets/videoMediateka/COSTA RICA IN 4K 60fps HDR (ULTRA HD).mp4" alt="Video 1">
+                        
+                        <!-- Carrusel de fotos -->
+                        <div class="carousel-container">
+                            <div id="carouselFotos" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <img src="assets/img_mediateka/20anios1.jpg" class="d-block w-100" alt="Reunión LEAD 2023">
                                         <div class="carousel-caption">
-                                            <h5>Impacto del Cambio Climático</h5>
-                                            <p>Investigación y resultados 2023</p>
+                                            <h5>Reunión Internacional 2023</h5>
+                                            <p>Discusión sobre sostenibilidad global</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img_mediateka/convocatoria-2020.jpg" class="d-block w-100" alt="Taller LEAD">
+                                        <div class="carousel-caption">
+                                            <h5>Taller de Liderazgo Ambiental</h5>
+                                            <p>Participantes de toda Latinoamérica</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <img src="assets/img_mediateka/convocatoria-2021.jpg" class="d-block w-100" alt="Conferencia">
+                                        <div class="carousel-caption">
+                                            <h5>Conferencia Anual</h5>
+                                            <p>Presentación de proyectos sustentables</p>
                                         </div>
                                     </div>
                                 </div>
-                                <div class="carousel-item">
-                                    <div class="video-container">
-                                        <img src="/api/placeholder/800/400" alt="Video 2">
-                                        <div class="carousel-caption">
-                                            <h5>Desarrollo Sustentable</h5>
-                                            <p>Proyectos exitosos en México</p>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselFotos" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselFotos" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sección de Videos -->
+                <div class="tab-pane fade" id="videos">
+                    <div class="mediateka-content">
+                        <!-- Lista lateral de videos -->
+                        <div class="content-list">
+                            <h3>Catálogo de Videos</h3>
+                            <ul>
+                                <li class="active">Impacto del Cambio Climático</li>
+                                <li>Desarrollo Sustentable</li>
+                                <li>Conferencias 2023</li>
+                                <li>Testimonios de Participantes</li>
+                                <li>Proyectos en Acción</li>
+                                <li>Webinars Educativos</li>
+                                <li>Entrevistas a Expertos</li>
+                                <li>Documentales LEAD</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Carrusel de videos -->
+                        <div class="carousel-container">
+                            <div id="carouselVideos" class="carousel slide">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <div class="video-container">
+                                            <img src="assets/videoMediateka/COSTA RICA IN 4K 60fps HDR (ULTRA HD).mp4" alt="Video 1">
+                                            <div class="carousel-caption">
+                                                <h5>Impacto del Cambio Climático</h5>
+                                                <p>Investigación y resultados 2023</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="carousel-item">
+                                        <div class="video-container">
+                                            <img src="/api/placeholder/800/400" alt="Video 2">
+                                            <div class="carousel-caption">
+                                                <h5>Desarrollo Sustentable</h5>
+                                                <p>Proyectos exitosos en México</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
+                                <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideos" data-bs-slide="prev">
+                                    <span class="carousel-control-prev-icon"></span>
+                                </button>
+                                <button class="carousel-control-next" type="button" data-bs-target="#carouselVideos" data-bs-slide="next">
+                                    <span class="carousel-control-next-icon"></span>
+                                </button>
                             </div>
-                            <button class="carousel-control-prev" type="button" data-bs-target="#carouselVideos" data-bs-slide="prev">
-                                <span class="carousel-control-prev-icon"></span>
-                            </button>
-                            <button class="carousel-control-next" type="button" data-bs-target="#carouselVideos" data-bs-slide="next">
-                                <span class="carousel-control-next-icon"></span>
-                            </button>
                         </div>
                     </div>
-        
-                    <!-- Sección de Documentos -->
-                    <div class="tab-pane fade" id="documentos">
-                        <div class="row row-cols-1 row-cols-md-3 g-4">
-                            <div class="col">
-                                <div class="card h-100 pdf-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Reporte Anual 2023</h5>
-                                        <p class="card-text">Resultados y logros del programa LEAD México</p>
-                                        <a href="#" class="btn btn-success">Descargar PDF</a>
+                </div>
+
+                <!-- Sección de Documentos -->
+                <div class="tab-pane fade" id="documentos">
+                    <div class="mediateka-content">
+                        <!-- Lista lateral de documentos -->
+                        <div class="content-list">
+                            <h3>Biblioteca Digital</h3>
+                            <ul>
+                                <li class="active">Reporte Anual 2023</li>
+                                <li>Guía de Sostenibilidad</li>
+                                <li>Investigación 2023</li>
+                                <li>Manual de Mejores Prácticas</li>
+                                <li>Estudios de Caso</li>
+                                <li>Publicaciones Académicas</li>
+                                <li>Informes Técnicos</li>
+                                <li>Papers de Investigación</li>
+                            </ul>
+                        </div>
+                        
+                        <!-- Grid de documentos -->
+                        <div class="carousel-container">
+                            <div class="row row-cols-1 row-cols-md-2 g-4">
+                                <div class="col">
+                                    <div class="card h-100 pdf-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Reporte Anual 2023</h5>
+                                            <p class="card-text">Resultados y logros del programa LEAD México</p>
+                                            <a href="#" class="btn btn-success">Descargar PDF</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100 pdf-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Guía de Sostenibilidad</h5>
-                                        <p class="card-text">Manual práctico para líderes ambientales</p>
-                                        <a href="#" class="btn btn-success">Descargar PDF</a>
+                                <div class="col">
+                                    <div class="card h-100 pdf-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Guía de Sostenibilidad</h5>
+                                            <p class="card-text">Manual práctico para líderes ambientales</p>
+                                            <a href="#" class="btn btn-success">Descargar PDF</a>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                            <div class="col">
-                                <div class="card h-100 pdf-card">
-                                    <div class="card-body">
-                                        <h5 class="card-title">Investigación 2023</h5>
-                                        <p class="card-text">Estudios sobre cambio climático en México</p>
-                                        <a href="#" class="btn btn-success">Descargar PDF</a>
+                                <div class="col">
+                                    <div class="card h-100 pdf-card">
+                                        <div class="card-body">
+                                            <h5 class="card-title">Investigación 2023</h5>
+                                            <p class="card-text">Estudios sobre cambio climático en México</p>
+                                            <a href="#" class="btn btn-success">Descargar PDF</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -261,11 +389,7 @@
                     </div>
                 </div>
             </div>
-        
-            <!-- Bootstrap JS -->
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
-        </body>
-
+        </div>
     </main>
     
     <footer>
@@ -353,4 +477,6 @@
         </div>
     </footer>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </html>
