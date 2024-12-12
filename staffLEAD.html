@@ -9,126 +9,118 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <style>
-    /* Estilos para el contenedor principal */
-    .council-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 4rem 10rem;
-        background-color: #f8f9fa;
+    /* Contenedor principal */
+.staff-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 4rem 10rem;
+    background-color: #f8f9fa;
+}
+
+/* Título heredado del consejo */
+.council-title {
+    color: var(--primary-dark);
+    font-size: 2.5em;
+    text-align: center;
+    margin-bottom: 1rem;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.council-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 3px;
+    background-color: var(--primary-light);
+}
+
+/* Lista de staff */
+.staff-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 3rem;
+}
+
+/* Estilo de cada miembro */
+.staff-member {
+    background-color: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    border-left: 4px solid var(--primary-light);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.staff-member:hover {
+    transform: translateX(10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Rol del miembro */
+.member-role {
+    color: var(--primary-light);
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 0.5rem;
+}
+
+/* Información del miembro */
+.member-info h3 {
+    color: var(--primary-dark);
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.member-info .position {
+    color: #666;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.member-info .institution {
+    color: #666;
+    font-size: 0.95rem;
+    margin-bottom: 0.25rem;
+}
+
+.member-info .email {
+    display: inline-block;
+    color: var(--primary-light) !important;
+    text-decoration: none;
+    margin-top: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.member-info .email:hover {
+    color: var(--primary-dark) !important;
+    text-decoration: underline !important;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .staff-container {
+        padding: 2rem 1rem;
     }
 
     .council-title {
-        color: var(--primary-dark);
-        font-size: 2.5em;
-        text-align: center;
-        margin-bottom: 1rem;
-        position: relative;
-        padding-bottom: 1rem;
+        font-size: 2em;
     }
 
-    .council-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 3px;
-        background-color: var(--primary-light);
+    .staff-member {
+        padding: 1.25rem;
     }
 
-    /* Lista de miembros */
-    .council-list {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+    .staff-member:hover {
+        transform: none;
     }
-
-    /* Estilo de cada miembro */
-    .council-member {
-        display: flex;
-        align-items: center;
-        background-color: white;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        border-left: 4px solid var(--primary-light);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
-        gap: 1.5rem;
-    }
-
-    .council-member:hover {
-        transform: translateX(10px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .member-info h3 {
-        color: var(--primary-dark);
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-    }
-
-    .member-info p {
-        color: #666;
-        line-height: 1.5;
-        font-size: 0.95rem;
-    }
-
-    /* Estilo para la imagen */
-    .member-image {
-        flex-shrink: 0;
-        width: 100px;
-        height: 100px;
-        border-radius: 10%;
-        overflow: hidden;
-        border: 3px solid var(--primary-light);
-    }
-
-    .member-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Información del miembro */
-    .member-info {
-        flex: 1;
-    }
-
-    .member-info h3 {
-        color: var(--primary-dark);
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-    }
-
-    .member-info p {
-        color: #666;
-        line-height: 1.5;
-        font-size: 0.95rem;
-        margin: 0;
-    }
-
-    /* Media Queries */
-    @media (max-width: 768px) {
-        .council-container {
-            padding: 2rem 1rem;
-        }
-
-        .council-title {
-            font-size: 2em;
-            margin-bottom: 2rem;
-        }
-
-        .council-member {
-            padding: 1.25rem;
-        }
-
-        .council-member:hover {
-            transform: none;
-        }
-    }
+}
 </style>
 <body>
     <header>
@@ -172,88 +164,58 @@
     </header>
 
     <main>
-        <div class="council-container">
-            <h2 class="council-title">CONSEJO DIRECTIVO LEAD-MÉXICO</h2>
+        <div class="staff-container">
+            <h2 class="council-title">STAFF LEAD-MÉXICO</h2>
             
-            <div class="council-list">
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/consejoDirectivo/ana-lorena.jpg" alt="Ana Lorena Gudiño Valdez">
-                    </div>
+            <div class="staff-list">
+                <div class="staff-member">
+                    <div class="member-role">COORDINADOR</div>
                     <div class="member-info">
-                        <h3>Ana Lorena Gudiño Valdez</h3>
-                        <p>Coordinadora de la Alianza Mexicana-Alemana de Cambio Climático, GIZ México. LEAD Fellow Cohorte 14</p>
+                        <h3>Boris Gregorio Graizbord Ed</h3>
+                        <p class="position">Profesor-Investigador</p>
+                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
+                        <p class="institution">El Colegio de México</p>
+                        <a href="mailto:graizbord@lead.colmex.mx" class="email">graizbord@lead.colmex.mx</a>
                     </div>
                 </div>
         
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/consejoDirectivo/rodolfo-lacy.jpg" alt="Ana Lorena Gudiño Valdez">
-                    </div>
+                <div class="staff-member">
+                    <div class="member-role">COORDINADORA ACADÉMICA</div>
                     <div class="member-info">
-                        <h3>Rodolfo Lacy Tamayo</h3>
-                        <p>Doctor en Ciencias e Ingeniería Ambientales. LEAD Fellow Cohorte 3</p>
+                        <h3>Amira Solano Azar</h3>
+                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
+                        <p class="institution">El Colegio de México</p>
+                        <a href="mailto:asolano@colmex.mx" class="email">asolano@colmex.mx</a>
                     </div>
                 </div>
         
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/consejoDirectivo/adolfo-mejia.jpg" alt="Ana Lorena Gudiño Valdez">
-                    </div>
+                <div class="staff-member">
+                    <div class="member-role">ASISTENTE INVESTIGACIÓN</div>
                     <div class="member-info">
-                        <h3>Adolfo Mejia Ponce de León</h3>
-                        <p>Profesor-Investigador, Departamento de Sociedad y Política Ambiental, CIIEMAD, IPN. LEAD Fellow Cohorte 8</p>
+                        <h3>Omar López Ibarra</h3>
+                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
+                        <p class="institution">El Colegio de México</p>
+                        <a href="mailto:olopez@colmex.mx" class="email">olopez@colmex.mx</a>
                     </div>
                 </div>
         
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/consejoDirectivo/ramon-perez.jpg" alt="Ana Lorena Gudiño Valdez">
-                    </div>
+                <div class="staff-member">
+                    <div class="member-role">ASISTENTE ADMINISTRATIVO</div>
                     <div class="member-info">
-                        <h3>Ramón Pérez Gil Salcido</h3>
-                        <p>Presidente de FAUNAM, A. C. Miembro del Consejo de la Unión Internacional para la Conservación de la Naturaleza (IUCN). LEAD Fellow Cohorte 4</p>
+                        <h3>César Montenegro Silva</h3>
+                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
+                        <p class="institution">El Colegio de México</p>
+                        <a href="mailto:cmonte@colmex.mx" class="email">cmonte@colmex.mx</a>
                     </div>
                 </div>
         
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/consejoDirectivo/patricia-romero.jpg" alt="Ana Lorena Gudiño Valdez">
-                    </div>
+                <div class="staff-member">
+                    <div class="member-role">SECRETARIA</div>
                     <div class="member-info">
-                        <h3>Patricia Romero Lankao</h3>
-                        <p>Professor, Department of Sociology, University of Toronto Scarborough. Canada Excellence Research Chair in Sustainability Transitions. LEAD Fellow Cohorte 8</p>
-                    </div>
-                </div>
-        
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/consejoDirectivo/gemma-santana.jpg" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>Gemma Santana Medina</h3>
-                        <p>Directora de Elijo por el Clima, A.C. y Especialista en Agenda 2030 para el Desarrollo Sustentable. LEAD Fellow Cohorte 15</p>
-                    </div>
-                </div>
-        
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/consejoDirectivo/eduardo-vega.jpg" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>Eduardo Vega López</h3>
-                        <p>Titular de la Coordinación Universitaria para la Sustentabilidad (CoUS), UNAM. LEAD Fellow Cohorte 6</p>
-                    </div>
-                </div>
-        
-                <div class="council-member ex-officio">
-                    <div class="member-image">
-                        <img src="assets/consejoDirectivo/silvia.giorguli.jpg" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>MIEMBRO EX OFFICIO</h3>
-                        <h3>Silvia Elena Giorguli Saucedo</h3>
-                        <p>Presidente, El Colegio de México</p>
+                        <h3>Vanessa Salmerón Braulio</h3>
+                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
+                        <p class="institution">El Colegio de México</p>
+                        <a href="mailto:vsalmeron@colmex.mx" class="email">vsalmeron@colmex.mx</a>
                     </div>
                 </div>
             </div>
