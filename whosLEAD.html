@@ -9,13 +9,6 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <style>
-    /* Estilos para el contenedor principal */
-    .council-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 4rem 2rem;
-        background-color: #f8f9fa;
-    }
 
     .council-title {
         color: var(--primary-dark);
@@ -36,118 +29,146 @@
         height: 3px;
         background-color: var(--primary-light);
     }
-
-    /* Lista de miembros */
-    .council-list {
-        display: flex;
-        flex-direction: column;
-        gap: 1.5rem;
+    /* Estilos específicos para Who's LEAD */
+    .whos-lead-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 1rem;
+        background-color: #f8f9fa; /* Sutil color de fondo para crear contraste */
     }
 
-    /* Estilo de cada miembro */
-    .council-member {
-        display: flex;
-        align-items: center;
-        background-color: white;
+
+    .lead-intro h2 {
+        color: var(--primary-dark);
+        font-size: 2.5em;
+        margin-bottom: 1rem;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Sombra sutil al texto */
+    }
+
+    .approach-section {
+        margin-bottom: 0;
+    }
+
+    .mission-section, .vision-section, .approach-section {
+        background-color: #fff;
         padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        border-left: 4px solid var(--primary-light);
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid rgba(0, 0, 0, 0.05); /* Borde sutil */
+        box-shadow: 
+            0 10px 15px -3px rgba(0, 0, 0, 0.1),
+            0 4px 6px -2px rgba(0, 0, 0, 0.05),
+            0 0 0 1px rgba(0, 0, 0, 0.02); /* Sombra más pronunciada y borde refinado */
         transition: transform 0.3s ease, box-shadow 0.3s ease;
-        gap: 1.5rem;
     }
 
-    .council-member:hover {
-        transform: translateX(10px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    .mission-section h3, .vision-section h3, .approach-section h3 {
+        color: var(--primary-light);
+        margin-bottom: 1.5rem;
+        font-size: 1.8em;
+        position: relative;
+        padding-bottom: 0.5rem;
     }
 
-    .member-info h3 {
+    .mission-section h3::after, .approach-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: var(--primary-light);
+        border-radius: 2px;
+    }
+
+    .mission-section h4 {
         color: var(--primary-dark);
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
+        margin: 1.5rem 0;
+        font-size: 1.2em;
     }
 
-    .member-info p {
-        color: #666;
-        line-height: 1.5;
-        font-size: 0.95rem;
+    .mission-section:hover, .approach-section:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+            0 20px 25px -5px rgba(0, 0, 0, 0.1),
+            0 10px 10px -5px rgba(0, 0, 0, 0.04),
+            0 0 0 1px rgba(0, 0, 0, 0.02);
     }
 
-    /* Estilo especial para miembro ex officio */
-    .ex-officio {
-        background: linear-gradient(135deg, var(--primary-light), var(--primary-dark));
-        border-left: none;
+    .mission-section ul, .approach-section ul {
+        list-style: none;
+        padding-left: 1.5rem;
+    }
+
+    .mission-section ul li, .approach-section ul li {
+        position: relative;
+        margin-bottom: 1rem;
+        padding-left: 1.5rem;
+    }
+
+    .mission-section ul li::before, .approach-section ul li::before {
+        content: "•";
+        color: var(--primary-light);
+        font-size: 1.5em;
+        position: absolute;
+        left: 0;
+        top: -0.2rem;
+    }
+
+    .vision-section {
+        background: var(--primary-light);
+        color: white;
+        box-shadow: 
+            0 15px 25px -5px rgba(40, 98, 23, 0.25),
+            0 10px 10px -5px rgba(40, 98, 23, 0.15),
+            0 0 0 1px rgba(40, 98, 23, 0.1);
+    }
+
+    .vision-section:hover {
+        transform: translateY(-2px);
+        box-shadow: 
+            0 25px 35px -5px rgba(40, 98, 23, 0.3),
+            0 15px 15px -5px rgba(40, 98, 23, 0.2),
+            0 0 0 1px rgba(40, 98, 23, 0.1);
+    }
+
+    .vision-section h3 {
         color: white;
     }
 
-    .ex-officio .member-info h3,
-    .ex-officio .member-info p {
-        color: white;
+    .vision-section h3::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 60px;
+        height: 3px;
+        background-color: white;
+        border-radius: 2px;
     }
 
-    .member-type {
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-        color: rgba(255, 255, 255, 0.9);
-    }
-
-    /* Estilo para la imagen */
-    .member-image {
-        flex-shrink: 0;
-        width: 100px;
-        height: 100px;
-        border-radius: 10%;
-        overflow: hidden;
-        border: 3px solid var(--primary-light);
-    }
-
-    .member-image img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Información del miembro */
-    .member-info {
-        flex: 1;
-    }
-
-    .member-info h3 {
-        color: var(--primary-dark);
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-        font-weight: bold;
-    }
-
-    .member-info p {
-        color: #666;
-        line-height: 1.5;
-        font-size: 0.95rem;
-        margin: 0;
+    .approach-content p {
+        margin-bottom: 1.5rem;
+        line-height: 1.6;
     }
 
     /* Media Queries */
     @media (max-width: 768px) {
-        .council-container {
+        .whos-lead-container {
             padding: 2rem 1rem;
         }
 
-        .council-title {
+        .mission-section, .vision-section, .approach-section {
+            padding: 1.5rem;
+        }
+
+        .lead-intro h2 {
             font-size: 2em;
-            margin-bottom: 2rem;
         }
 
-        .council-member {
-            padding: 1.25rem;
-        }
-
-        .council-member:hover {
-            transform: none;
+        .mission-section h3, .vision-section h3, .approach-section h3 {
+            font-size: 1.5em;
         }
     }
 </style>
@@ -193,91 +214,41 @@
     </header>
 
     <main>
-        <div class="council-container">
-            <h2 class="council-title">CONSEJO DIRECTIVO LEAD-MÉXICO</h2>
-            
-            <div class="council-list">
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/directivos/ana-lorena.webp" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>Ana Lorena Gudiño Valdez</h3>
-                        <p>Coordinadora de la Alianza Mexicana-Alemana de Cambio Climático, GIZ México. LEAD Fellow Cohorte 14</p>
-                    </div>
+        <div class="whos-lead-container">
+            <section class="lead-intro">
+                <h2 class="council-title">PROGRAMA LEAD-MÉXICO</h2>
+                <div class="mission-section">
+                    <h3>Misión</h3>
+                    <p>El objetivo fundamental del Programa LEAD-México es establecer una plataforma para impulsar la formación de líderes con un conocimiento profundo sobre las metas del desarrollo sustentable y los retos ambientales que México y el mundo enfrentan.</p>
+                    
+                    <h4>Los objetivos específicos se pueden resumir en tres grandes líneas:</h4>
+                    <ul>
+                        <li>Evaluar el origen y alcance de los retos ambientales;</li>
+                        <li>Encontrar soluciones integrales a problemas complejos sobre los recursos naturales y el medio ambiente que involucran asuntos regionales y transfronterizos, así como delinear estrategias para el uso y administración óptima de los recursos naturales;</li>
+                        <li>Implementar mejoras en la gobernanza de los recursos naturales y las políticas ambientales.</li>
+                    </ul>
                 </div>
-        
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/directivos/ana-lorena.webp" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>Rodolfo Lacy Tamayo</h3>
-                        <p>Doctor en Ciencias e Ingeniería Ambientales. LEAD Fellow Cohorte 3</p>
-                    </div>
+            </section>
+
+            <section class="vision-section">
+                <h3>Visión LEAD</h3>
+                <p>Los egresados del programa LEAD son reconocidos como especialistas y líderes profundamente comprometidos con el medio ambiente y el desarrollo sustentable de México en los diversos sectores de la sociedad (público, privado, social y académico), que contribuyen a implementar las metas del Desarrollo Sustentable en sus diversos ámbitos de acción e intervención.</p>
+            </section>
+
+            <section class="approach-section">
+                <h3>Enfoque LEAD-México: Aprendizaje en acción</h3>
+                <div class="approach-content">
+                    <p>Las oficinas de LEAD-México están ubicadas en una de las instituciones educativas más prestigiadas del país: El Colegio de México. Nuestra experiencia educativa se enfoca en desarrollar habilidades prácticas y una sólida formación académica.</p>
+                    <p>Las actividades desarrolladas por LEAD México incluyen:</p>
+                    <ul>
+                        <li>Presentaciones y discusiones con expertos, así como con funcionarios de gobierno a nivel nacional e internacional</li>
+                        <li>Representantes de los medios de comunicación, el sector privado y distinguidos académicos</li>
+                        <li>Estudios de caso, visitas de campo, simulaciones, módulos a distancia y tareas</li>
+                        <li>Un trabajo final de grupo que se presenta en la sesión internacional</li>
+                    </ul>
+                    <p>Una parte del entrenamiento se realiza en visitas de campo, donde los asociados LEAD pueden apreciar los retos que involucran las iniciativas de desarrollo sustentable e interactúan con los actores relevantes involucrados.</p>
                 </div>
-        
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/directivos/ana-lorena.webp" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>Adolfo Mejia Ponce de León</h3>
-                        <p>Profesor-Investigador, Departamento de Sociedad y Política Ambiental, CIIEMAD, IPN. LEAD Fellow Cohorte 8</p>
-                    </div>
-                </div>
-        
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/directivos/ana-lorena.webp" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>Ramón Pérez Gil Salcido</h3>
-                        <p>Presidente de FAUNAM, A. C. Miembro del Consejo de la Unión Internacional para la Conservación de la Naturaleza (IUCN). LEAD Fellow Cohorte 4</p>
-                    </div>
-                </div>
-        
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/directivos/ana-lorena.webp" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>Patricia Romero Lankao</h3>
-                        <p>Professor, Department of Sociology, University of Toronto Scarborough. Canada Excellence Research Chair in Sustainability Transitions. LEAD Fellow Cohorte 8</p>
-                    </div>
-                </div>
-        
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/directivos/ana-lorena.webp" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>Gemma Santana Medina</h3>
-                        <p>Directora de Elijo por el Clima, A.C. y Especialista en Agenda 2030 para el Desarrollo Sustentable. LEAD Fellow Cohorte 15</p>
-                    </div>
-                </div>
-        
-                <div class="council-member">
-                    <div class="member-image">
-                        <img src="assets/directivos/ana-lorena.webp" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-info">
-                        <h3>Eduardo Vega López</h3>
-                        <p>Titular de la Coordinación Universitaria para la Sustentabilidad (CoUS), UNAM. LEAD Fellow Cohorte 6</p>
-                    </div>
-                </div>
-        
-                <div class="council-member ex-officio">
-                    <div class="member-image">
-                        <img src="assets/directivos/ana-lorena.webp" alt="Ana Lorena Gudiño Valdez">
-                    </div>
-                    <div class="member-type">MIEMBRO EX OFFICIO</div>
-                    <div class="member-info">
-                        <h3>Silvia Elena Giorguli Saucedo</h3>
-                        <p>Presidente, El Colegio de México</p>
-                    </div>
-                </div>
-            </div>
+            </section>
         </div>
     </main>
     
