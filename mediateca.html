@@ -12,116 +12,135 @@
             padding: 2rem;
             background-color: #f8f9fa;
         }
-
-        .mediateka-content {
-            display: flex;
-            gap: 2rem;
-            margin-top: 2rem;
-            min-height: 500px; /* Altura mínima para mantener consistencia */
-        }
-
-        .content-list {
-            flex: 1;
-            background: white;
-            padding: 1.5rem;
-            border-radius: 8px;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            max-height: 500px;
-            overflow-y: auto;
-            scrollbar-width: thin;
-            scrollbar-color: #1d4d25 #f0f0f0;
-        }
-
-        /* Estilos para la barra de desplazamiento en navegadores WebKit */
-        .content-list::-webkit-scrollbar {
-            width: 8px;
-        }
-
-        .content-list::-webkit-scrollbar-track {
-            background: #f0f0f0;
-            border-radius: 4px;
-        }
-
-        .content-list::-webkit-scrollbar-thumb {
-            background-color: #1d4d25;
-            border-radius: 4px;
-        }
-
-        .content-list h3 {
-            color: #1d4d25;
-            margin-bottom: 1rem;
-        }
-
-        .content-list ul {
-            list-style: none;
-            padding: 0;
-        }
-
-        .content-list li {
-            padding: 0.75rem;
-            border-bottom: 1px solid #eee;
-            cursor: pointer;
-            transition: background-color 0.2s;
-        }
-
-        .carousel-container {
-            flex: 2;
-            height: 500px; 
-        }
-
-        .content-list li:hover {
-            background-color: #f0f8f1;
-        }
-
-        .content-list li.active {
-            background-color: #1d4d25;
-            color: white;
-        }
-
+    
         .section-title {
             color: #1d4d25;
             margin-bottom: 2rem;
             text-align: center;
             font-family: 'Roboto Condensed', sans-serif;
         }
-
+    
+        /* Estilos para la estructura principal */
+        .mediateka-content {
+            display: flex;
+            gap: 2rem;
+            margin-top: 2rem;
+            min-height: 500px;
+        }
+    
+        /* Contenedor del sidebar */
+        .sidebar-container {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            height: 500px;
+        }
+    
+        /* Encabezado fijo del sidebar */
+        .sidebar-header {
+            padding: 1.5rem;
+            background: white;
+            border-bottom: 2px solid #1d4d25;
+            border-radius: 8px 8px 0 0;
+        }
+    
+        .sidebar-header h3 {
+            color: #1d4d25;
+            margin: 0;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+    
+        /* Lista con scroll */
+        .content-list {
+            flex: 1;
+            padding: 1.5rem;
+            overflow-y: auto;
+            scrollbar-width: thin;
+            scrollbar-color: #1d4d25 #f0f0f0;
+        }
+    
+        .content-list ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    
+        .content-list li {
+            padding: 0.75rem;
+            border-bottom: 1px solid #eee;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+    
+        .content-list li:hover {
+            background-color: #f0f8f1;
+        }
+    
+        .content-list li.active {
+            background-color: #1d4d25;
+            color: white;
+        }
+    
+        /* Estilos para la barra de desplazamiento */
+        .content-list::-webkit-scrollbar {
+            width: 8px;
+        }
+    
+        .content-list::-webkit-scrollbar-track {
+            background: #f0f0f0;
+            border-radius: 4px;
+        }
+    
+        .content-list::-webkit-scrollbar-thumb {
+            background-color: #1d4d25;
+            border-radius: 4px;
+        }
+    
+        /* Contenedor del carrusel */
+        .carousel-container {
+            flex: 2;
+        }
+    
         .carousel {
             background: white;
             padding: 2rem;
             border-radius: 8px;
             box-shadow: 0 2px 4px rgba(0,0,0,0.1);
             margin-bottom: 3rem;
-            height: 100%;
         }
-
+    
         .carousel-item img {
             height: 400px;
             object-fit: cover;
         }
-
-        /* Para hacer las flechas verdes y más gruesas */
+    
+        /* Estilos para las flechas del carrusel */
         .carousel-control-prev-icon,
         .carousel-control-next-icon {
-            background-color: #1d4d25; /* El verde institucional */
-            padding: 25px; /* Aumenta el tamaño */
-            border-radius: 50%; /* Hace el fondo circular */
-            background-size: 50% 50%; /* Ajusta el tamaño del icono dentro del círculo */
+            background-color: #1d4d25;
+            padding: 25px;
+            border-radius: 50%;
+            background-size: 50% 50%;
         }
-
-        /* Opcional: si quieres hacer el contenedor de las flechas más grande */
+    
         .carousel-control-prev,
         .carousel-control-next {
             width: 10%;
             z-index: 5;
         }
-
+    
+        /* Estilos para el contenedor de video */
         .video-container {
             position: relative;
             padding-bottom: 56.25%;
             height: 0;
             overflow: hidden;
         }
-
+    
         .video-container img {
             position: absolute;
             top: 0;
@@ -130,42 +149,66 @@
             height: 100%;
             object-fit: cover;
         }
-
+    
+        /* Estilos para las tabs */
         .tab-content {
             margin-top: 1rem;
-
         }
-
-        .pdf-card {
-            transition: transform 0.2s;
-        }
-
-        .pdf-card:hover {
-            transform: translateY(-5px);
-        }
-
+    
         .nav-tabs .nav-link {
             color: #1d4d25;
             cursor: pointer;
-            user-select: none;
         }
-
-        /* Color para la tab activa */
+    
         .nav-tabs .nav-link.active {
             background-color: #5cb439;
             color: white;
             border-color: #5cb439;
         }
-
-        /* Hover efecto para las tabs */
+    
         .nav-tabs .nav-link:hover {
             border-color: #5cb439;
             color: #5cb439;
         }
-
-        /* Para mantener el color blanco del texto cuando está activo incluso al hover */
+    
         .nav-tabs .nav-link.active:hover {
             color: white;
+        }
+    
+        /* Estilos para las tarjetas PDF */
+        .pdf-card {
+            transition: transform 0.2s;
+        }
+    
+        .pdf-card:hover {
+            transform: translateY(-5px);
+        }
+    
+        /* Estilos para los botones */
+        .btn-success {
+            background-color: #5cb439;
+            border-color: #5cb439;
+        }
+    
+        .btn-success:hover {
+            background-color: #2c7339;
+            border-color: #2c7339;
+        }
+    
+        /* Estilos responsive */
+        @media (max-width: 768px) {
+            .mediateka-content {
+                flex-direction: column;
+            }
+    
+            .sidebar-container,
+            .carousel-container {
+                width: 100%;
+            }
+    
+            .carousel-item img {
+                height: 300px;
+            }
         }
     </style>
 </head>
@@ -216,13 +259,13 @@
             
             <ul class="nav nav-tabs" id="mediatekaTab" role="tablist">
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#fotos" type="button">Galería de Fotos</button>
+                    <button class="nav-link active" id="fotos-tab" data-bs-toggle="tab" data-bs-target="#fotos" type="button" role="tab" aria-controls="fotos" aria-selected="true">Galería de Fotos</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#videos" type="button">Videos</button>
+                    <button class="nav-link" id="videos-tab" data-bs-toggle="tab" data-bs-target="#videos" type="button" role="tab" aria-controls="videos" aria-selected="false">Videos</button>
                 </li>
                 <li class="nav-item" role="presentation">
-                    <button class="nav-link" data-bs-toggle="tab" data-bs-target="#documentos" type="button">Documentos</button>
+                    <button class="nav-link" id="documentos-tab" data-bs-toggle="tab" data-bs-target="#documentos" type="button" role="tab" aria-controls="documentos" aria-selected="false">Documentos</button>
                 </li>
             </ul>
 
@@ -230,21 +273,25 @@
                 <!-- Sección de Fotos -->
                 <div class="tab-pane fade show active" id="fotos">
                     <div class="mediateka-content">
-                        <!-- Lista lateral de fotos -->
-                        <div class="content-list">
-                            <h3>Galería Completa</h3>
-                            <ul>
-                                <li class="active">Reunión Internacional 2023</li>
-                                <li>Taller de Liderazgo Ambiental</li>
-                                <li>Conferencia Anual</li>
-                                <li>Seminario de Desarrollo Sustentable</li>
-                                <li>Congreso Latinoamericano 2023</li>
-                                <li>Encuentro de Expertos</li>
-                                <li>Proyectos Comunitarios</li>
-                                <li>Capacitación Regional</li>
-                                <li>Foro de Innovación</li>
-                                <li>Workshop Internacional</li>
-                            </ul>
+                        <!-- Sidebar con encabezado fijo -->
+                        <div class="sidebar-container">
+                            <div class="sidebar-header">
+                                <h3>GALERÍA COMPLETA</h3>
+                            </div>
+                            <div class="content-list">
+                                <ul>
+                                    <li class="active">Reunión Internacional 2023</li>
+                                    <li>Taller de Liderazgo Ambiental</li>
+                                    <li>Conferencia Anual</li>
+                                    <li>Seminario de Desarrollo Sustentable</li>
+                                    <li>Congreso Latinoamericano 2023</li>
+                                    <li>Encuentro de Expertos</li>
+                                    <li>Proyectos Comunitarios</li>
+                                    <li>Capacitación Regional</li>
+                                    <li>Foro de Innovación</li>
+                                    <li>Workshop Internacional</li>
+                                </ul>
+                            </div>
                         </div>
                         
                         <!-- Carrusel de fotos -->
@@ -287,19 +334,23 @@
                 <!-- Sección de Videos -->
                 <div class="tab-pane fade" id="videos">
                     <div class="mediateka-content">
-                        <!-- Lista lateral de videos -->
-                        <div class="content-list">
-                            <h3>Catálogo de Videos</h3>
-                            <ul>
-                                <li class="active">Impacto del Cambio Climático</li>
-                                <li>Desarrollo Sustentable</li>
-                                <li>Conferencias 2023</li>
-                                <li>Testimonios de Participantes</li>
-                                <li>Proyectos en Acción</li>
-                                <li>Webinars Educativos</li>
-                                <li>Entrevistas a Expertos</li>
-                                <li>Documentales LEAD</li>
-                            </ul>
+                        <!-- Sidebar con encabezado fijo -->
+                        <div class="sidebar-container">
+                            <div class="sidebar-header">
+                                <h3>CATÁLOGO DE VIDEOS</h3>
+                            </div>
+                            <div class="content-list">
+                                <ul>
+                                    <li class="active">Impacto del Cambio Climático</li>
+                                    <li>Desarrollo Sustentable</li>
+                                    <li>Conferencias 2023</li>
+                                    <li>Testimonios de Participantes</li>
+                                    <li>Proyectos en Acción</li>
+                                    <li>Webinars Educativos</li>
+                                    <li>Entrevistas a Expertos</li>
+                                    <li>Documentales LEAD</li>
+                                </ul>
+                            </div>
                         </div>
                         
                         <!-- Carrusel de videos -->
@@ -339,19 +390,23 @@
                 <!-- Sección de Documentos -->
                 <div class="tab-pane fade" id="documentos">
                     <div class="mediateka-content">
-                        <!-- Lista lateral de documentos -->
-                        <div class="content-list">
-                            <h3>Biblioteca Digital</h3>
-                            <ul>
-                                <li class="active">Reporte Anual 2023</li>
-                                <li>Guía de Sostenibilidad</li>
-                                <li>Investigación 2023</li>
-                                <li>Manual de Mejores Prácticas</li>
-                                <li>Estudios de Caso</li>
-                                <li>Publicaciones Académicas</li>
-                                <li>Informes Técnicos</li>
-                                <li>Papers de Investigación</li>
-                            </ul>
+                        <!-- Sidebar con encabezado fijo -->
+                        <div class="sidebar-container">
+                            <div class="sidebar-header">
+                                <h3>BIBLIOTECA DIGITAL</h3>
+                            </div>
+                            <div class="content-list">
+                                <ul>
+                                    <li class="active">Reporte Anual 2023</li>
+                                    <li>Guía de Sostenibilidad</li>
+                                    <li>Investigación 2023</li>
+                                    <li>Manual de Mejores Prácticas</li>
+                                    <li>Estudios de Caso</li>
+                                    <li>Publicaciones Académicas</li>
+                                    <li>Informes Técnicos</li>
+                                    <li>Papers de Investigación</li>
+                                </ul>
+                            </div>
                         </div>
                         
                         <!-- Grid de documentos -->
