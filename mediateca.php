@@ -14,27 +14,6 @@
             background-color: #f8f9fa;
         }
 
-        .council-title {
-            color: var(--primary-dark);
-            font-size: 2.5em;
-            text-align: center;
-            margin-bottom: 1rem;
-            position: relative;
-            padding-bottom: 1rem;
-        }
-
-        .council-title::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 100px;
-            height: 3px;
-            background-color: var(--primary-light);
-        }
-
-    
         /* Estilos para la estructura principal */
         .mediateka-content {
             display: flex;
@@ -242,7 +221,7 @@
         </section>
         
         <div class="mediateka-container">
-            <h2 class="council-title">MEDIATECA LEAD MÉXICO</h2>
+            <h2 class="council-title"><span>Mediateca</span></h2>
             
             <ul class="nav nav-tabs" id="mediatekaTab" role="tablist">
                 <li class="nav-item" role="presentation">

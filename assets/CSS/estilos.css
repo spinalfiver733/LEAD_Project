@@ -75,12 +75,25 @@
         border: none;
     }
 
+    /* Mantenemos el estilo original para la imagen del logo */
+    .main-header img {
+        height: auto;
+        width: 200px;
+    }
+
+    /* Nuevo estilo específico para la imagen del texto */
+    .main-header .texto-lead {
+        width: 750px; /* O el tamaño que prefieras */
+    }
+
+    /* Aseguramos que el contenedor tenga suficiente espacio */
     .main-header {
         background-color: var(--primary-light);
-        padding: 20px 50px;
+        padding: 0px 30px;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        gap: 20px; /* Añadimos un espacio entre las imágenes */
     }
 
     .logo-container h1 {
@@ -701,6 +714,38 @@
     .history-cta button:hover {
         background-color: white;
         color: var(--primary-light);
+    }
+    /*Estilos para titulos de subpaginas*/
+    .council-title {
+        color: #007e1b;
+        font-size: 2.5em;
+        text-align: center;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Líneas horizontales sin espacio */
+    .council-title::before,
+    .council-title::after {
+        content: '';
+        height: 2px;
+        background-color: #007e1b;
+        flex: 1;
+        margin: 0;
+    }
+
+    /* Contenedor del texto */
+    .council-title span {
+        background-color: #006400;
+        color: white;
+        padding: 0.5rem 2rem;
+        border-radius: 50px; /* Volvemos a añadir los bordes redondeados */
+        margin: 0;
     }
 
     /* Responsive Design */

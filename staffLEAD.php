@@ -18,27 +18,6 @@
     background-color: #f8f9fa;
 }
 
-/* Título heredado del consejo */
-.council-title {
-    color: var(--primary-dark);
-    font-size: 2.5em;
-    text-align: center;
-    margin-bottom: 1rem;
-    position: relative;
-    padding-bottom: 1rem;
-}
-
-.council-title::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 100px;
-    height: 3px;
-    background-color: var(--primary-light);
-}
-
 /* Lista de staff */
 .staff-list {
     display: flex;
@@ -134,7 +113,7 @@
         </section>
 
         <div class="staff-container">
-            <h2 class="council-title">STAFF LEAD-MÉXICO</h2>
+            <h2 class="council-title"><span>Staff</span></h2>
             
             <div class="staff-list">
                 <div class="staff-member">

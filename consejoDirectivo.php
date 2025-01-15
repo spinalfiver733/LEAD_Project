@@ -18,26 +18,6 @@
         background-color: #f8f9fa;
     }
 
-    .council-title {
-        color: var(--primary-dark);
-        font-size: 2.5em;
-        text-align: center;
-        margin-bottom: 1rem;
-        position: relative;
-        padding-bottom: 1rem;
-    }
-
-    .council-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 3px;
-        background-color: var(--primary-light);
-    }
-
     /* Lista de miembros */
     .council-list {
         display: flex;
@@ -142,7 +122,7 @@
         </section>
 
         <div class="council-container">
-            <h2 class="council-title">CONSEJO DIRECTIVO LEAD-MÉXICO</h2>
+            <h2 class="council-title"><span>Consejo Directivo</span></h2>
             
             <div class="council-list">
                 <div class="council-member">

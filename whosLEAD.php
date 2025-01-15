@@ -10,25 +10,6 @@
     <link rel="stylesheet" href="assets/CSS/estilos.css">
 </head>
 <style>
-    .council-title {
-        color: var(--primary-dark);
-        font-size: 2.5em;
-        text-align: center;
-        margin-bottom: 1rem;
-        position: relative;
-        padding-bottom: 1rem;
-    }
-
-    .council-title::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 100px;
-        height: 3px;
-        background-color: var(--primary-light);
-    }
     /* Estilos específicos para Who's LEAD */
     .whos-lead-container {
         max-width: 1200px;
@@ -184,7 +165,7 @@
         
         <div class="whos-lead-container">
             <section class="lead-intro">
-                <h2 class="council-title">PROGRAMA LEAD-MÉXICO</h2>
+                <h2 class="council-title"><span>Programa LEAD-México</span></h2>
                 <div class="mission-section">
                     <h3>Misión</h3>
                     <p>El objetivo fundamental del Programa LEAD-México es establecer una plataforma para impulsar la formación de líderes con un conocimiento profundo sobre las metas del desarrollo sustentable y los retos ambientales que México y el mundo enfrentan.</p>
