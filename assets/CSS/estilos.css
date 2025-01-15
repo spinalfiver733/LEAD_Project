@@ -369,7 +369,8 @@
         color: var(--primary-dark);
         margin: 0;
         text-align: center;
-        font-weight: bold;  /* o puedes usar font-weight: 700 */
+        font-weight: bold;
+        white-space: nowrap; /* Esta es la línea que mantiene el texto en una línea */
     }
 
     .card-container button {
