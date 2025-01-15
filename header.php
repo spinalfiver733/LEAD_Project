@@ -2,12 +2,12 @@
 <header>
     <div class="top-nav">
         <ul>
-            <li><a href="index.php">INICIO</a></li>
+            <li><a href="index.php">Inicio</a></li>
             <li>APLICAR</li>
             <li>VISITAR</li>
             <li>ESTUDIANTES</li>
             <li>PROFESORADO</li>
-            <li>EVALUAMOS</li>
+            <li>EXALUMNOS</li>
             <li>
                 <div class="search-container">
                     <input type="search" placeholder="Buscar...">
@@ -30,7 +30,6 @@
             <li><a href="whosLEAD.php"><strong>¿Qué es Lead?</strong></a></li>
             <li><a href="consejoDirectivo.php"><strong>Consejo Directivo</strong></a></li>
             <li><a href="staffLEAD.php"><strong>Staff</strong></a></li>
-            <li><strong>LEAD México</strong></li>
             <li><strong>Publicaciones</strong></li>
             <li><strong>Asociados</strong></li>
             <li><strong>Solicitud de ingreso</strong></li>

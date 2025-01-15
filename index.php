@@ -53,36 +53,38 @@
             </div>
             
             <div class="reuniones">
-                <h3>Reuniones Internacionales organizadas por LEAD México</h3>
-                <hr>
-                <ul>
-                    <li>2002 <br> Our Future With (out) Water?</li>
+                <div class="contenido">
+                    <h3>Reuniones Internacionales organizadas por LEAD México</h3>
                     <hr>
-                    <li>2003 <br> Crossing Water Thresholds</li>
-                    <hr>
-                    <li>2008 <br> Mega Ciudades Y Cambio Climático</li>
-                    <hr>
-                    <li><strong>Publicaciones | Medios</strong></li>
-                </ul>
+                    <ul>
+                        <li>2002 <br> Our Future With (out) Water?</li>
+                        <hr>
+                        <li>2003 <br> Crossing Water Thresholds</li>
+                        <hr>
+                        <li>2008 <br> Mega Ciudades Y Cambio Climático</li>
+                        <hr>
+                        <li><strong>Publicaciones | Medios</strong></li>
+                    </ul>
+                </div>
             </div>
         </section>
         
         <section class="program-cards">
             <div class="card">
                 <img src="assets/DSC0342.jpg" alt="">
-                <p>Propuesta del programa</p>
+                <p><strong>Propuesta del programa</strong></p>
             </div>
             <div class="card">
                 <img src="assets/body-bg.png" alt="">
-                <p>Perfil de asociados</p>
+                <p><strong>Perfil de asociados</strong></p>
             </div>
             <div class="card">
                 <img src="assets/blog-img1.png" alt="">
-                <p>Diseño curricular</p>
+                <p><strong>Diseño curricular</strong></p>
             </div>
             <div class="card">
                 <img src="assets/blog-img3.png" alt="">
-                <p>El Colegio de México</p>
+                <p><strong>El Colegio de México</strong></p>
             </div>
         </section>
 
