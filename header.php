@@ -1,8 +1,8 @@
-<!-- header.html -->
+<!-- header.php -->
 <header>
     <div class="top-nav">
         <ul>
-            <li><a href="index.html">INICIO</a></li>
+            <li><a href="index.php">INICIO</a></li>
             <li>APLICAR</li>
             <li>VISITAR</li>
             <li>ESTUDIANTES</li>
@@ -27,14 +27,14 @@
   
     <nav class="main-nav">
         <ul>
-            <li><a href="whosLEAD.html"><strong>¿Qué es Lead?</strong></a></li>
-            <li><a href="consejoDirectivo.html"><strong>Consejo Directivo</strong></a></li>
-            <li><a href="staffLEAD.html"><strong>Staff</strong></a></li>
+            <li><a href="whosLEAD.php"><strong>¿Qué es Lead?</strong></a></li>
+            <li><a href="consejoDirectivo.php"><strong>Consejo Directivo</strong></a></li>
+            <li><a href="staffLEAD.php"><strong>Staff</strong></a></li>
             <li><strong>LEAD México</strong></li>
             <li><strong>Publicaciones</strong></li>
             <li><strong>Asociados</strong></li>
             <li><strong>Solicitud de ingreso</strong></li>
-            <li><a href="mediateca.html"><strong>Mediateca</strong></a></li>
+            <li><a href="mediateca.php"><strong>Mediateca</strong></a></li>
         </ul>
     </nav>
 </header>
