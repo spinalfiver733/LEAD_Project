@@ -6,12 +6,12 @@
     <title>LEAD México</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="assets/CSS/estilos.css">
     
 </head>
 <body>
 
-    <?php include 'header.html'; ?>
+    <?php include 'header.php'; ?>
 
     <main>
         
@@ -92,32 +92,7 @@
 
     </main>
     
-    <?php include 'footer.html'; ?>
+    <?php include 'footer.php'; ?>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const sectionHeaders = document.querySelectorAll('.section-header');
-
-    sectionHeaders.forEach(header => {
-        header.addEventListener('click', function() {
-            const content = this.nextElementSibling;
-            const arrow = this.querySelector('.arrow');
-            
-            // Toggle the expanded class
-            content.classList.toggle('expanded');
-            arrow.classList.toggle('expanded');
-            
-            // Close other sections
-            sectionHeaders.forEach(otherHeader => {
-                if (otherHeader !== header) {
-                    const otherContent = otherHeader.nextElementSibling;
-                    const otherArrow = otherHeader.querySelector('.arrow');
-                    otherContent.classList.remove('expanded');
-                    otherArrow.classList.remove('expanded');
-                }
-            });
-        });
-    });
-});
-</script>
+<script src="assets/JS/main.js"></script>
 </html>
