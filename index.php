@@ -14,12 +14,16 @@
     <?php include 'header.php'; ?>
 
     <main>
-        
+
         <section class="hero">
             <?php include 'header-lead.php'; ?>
             <div class="hero-cta">
                 <button>CONSULTA PROYECTOS</button>
             </div>
+        </section>
+
+        <section class="collage">
+            <img src="assets" alt="collage" title="Collage LEAD">
         </section>
 
         <section class="info-cards">

@@ -198,7 +198,7 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr) 2fr;
         grid-template-rows: auto auto;
-        column-gap: 100px; /* Espacio horizontal más grande */
+        column-gap: 100px; 
         row-gap: 30px;  
         grid-template-areas: 
             "programa consejo reuniones"
@@ -257,9 +257,12 @@
         grid-area: reuniones;
         background-color: rgba(255, 255, 255, 0.1);
         padding: 30px;
-        border-radius: 5px;
-        border: 3px solid white;
-        margin-left: 30px; /* Añade espacio adicional a la izquierda */
+        margin-left: 30px;
+        margin-bottom: -100px;
+        border-top: 7px solid white;
+        border-left: 3px solid white;
+        border-right: 3px solid white;
+        border-bottom: none; /* o puedes omitir esta línea ya que por defecto no habrá borde */
     }
 
     .reuniones h4 {
@@ -312,6 +315,7 @@
         color: var(--primary-dark);
         margin: 0;
         text-align: center;
+        font-weight: bold;  /* o puedes usar font-weight: 700 */
     }
 
     .card-container button {
