@@ -213,6 +213,25 @@
         grid-area: consejo;
     }
 
+    .collage {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 20px 0; /* Opcional: para dar algo de espacio arriba y abajo */
+    }
+    
+    .img-collage {
+        width: 74.5%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .img-collage img {
+        width: 100%;
+        height: auto;
+        object-fit: contain; /* Esto asegurará que la imagen mantenga sus proporciones */
+    }
+
     .stats {
         grid-area: stats;
         position: relative; /* Para el hr superior */

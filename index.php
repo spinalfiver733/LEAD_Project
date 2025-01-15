@@ -23,7 +23,9 @@
         </section>
 
         <section class="collage">
-            <img src="assets" alt="collage" title="Collage LEAD">
+            <div class="img-collage">
+                <img src="assets/Collage.webp" alt="Collage" title="Collage LEAD">
+            </div>
         </section>
 
         <section class="info-cards">
