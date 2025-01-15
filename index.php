@@ -23,15 +23,20 @@
         </section>
 
         <section class="info-cards">
-            <div class="card">
-                <h3>PROGRAMA ANUAL</h3>
+            <div class="card-container">
+                <div class="card">
+                    <h3>PROGRAMA ANUAL</h3>
+                </div>
                 <button>CONSULTAR</button>
             </div>
             
-            <div class="card">
-                <h3>CONSEJO DIRECTIVO</h3>
+            <div class="card-container">
+                <div class="card">
+                    <h3>CONSEJO DIRECTIVO</h3>
+                </div>
                 <button>CONSULTAR</button>
             </div>
+            
             <div class="stats">
                 <p style="text-align:left;">HASTA EL 2009:</p>
                 <div class="numbers">
@@ -40,6 +45,7 @@
                     <span><h2>57%</h2> hombres</span>
                 </div> 
             </div>
+            
             <div class="reuniones">
                 <h3>Reuniones Internacionales organizadas por LEAD México</h3>
                 <hr>
@@ -54,7 +60,7 @@
                 </ul>
             </div>
         </section>
-
+        
         <section class="program-cards">
             <div class="card">
                 <img src="assets/DSC0342.jpg" alt="">
