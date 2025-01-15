@@ -529,15 +529,15 @@
     .road-hero {
         position: relative;
         width: 100%;
-        height: 100vh; /* Esto hace que ocupe el 100% del alto de la ventana */
+        height: calc(100vh - 100px); /* Reduce 100px en total (50px arriba y 50px abajo) */
         background-image: url("/LEAD_PROJECT/assets/fondocarretera.png");
-        background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
-        background-position: center; /* Centra la imagen */
-        background-repeat: no-repeat; /* Evita que la imagen se repita */
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
         display: flex;
         align-items: center;
         justify-content: center;
-        padding: 2rem; 
+        padding: 50px 2rem; /* 50px arriba y abajo, 2rem a los lados */
     }
 
     .text-container {
