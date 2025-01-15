@@ -7,7 +7,7 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/CSS/estilos.css">
-    
+    <link rel="icon" type="image/x-icon" href="assets/LogoLEAD.webp">
 </head>
 <body>
 
