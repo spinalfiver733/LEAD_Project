@@ -126,7 +126,7 @@
         background-color: #f5f5f5;
     }
 
-    .hero h2 {
+    .hero h1 {
         color: var(--primary-light);
         font-size: 2em;
         margin-bottom: 5px;
@@ -152,15 +152,15 @@
         margin-bottom: 30px;
     }
     
-    .lead-header h2 {
+    .lead-header h1 {
         color: var(--primary-light);
-        font-size: 2em;
+        font-size: 3em;
         margin-bottom: 5px;
     }
     
     .lead-header p {
         color: var(--primary-light);
-        font-size: 1.22em;
+        font-size: 1.845em;
     }
     
     .hero-cta {
