@@ -280,7 +280,7 @@
                             <div id="carouselFotos" class="carousel slide">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="assets/img_mediateka/20anios1.jpg" class="d-block w-100" alt="Reunión LEAD 2023">
+                                        <img src="assets/IMG/img_mediateka/20anios1.jpg" class="d-block w-100" alt="Reunión LEAD 2023">
                                         <!---
                                         <div class="carousel-caption">
                                             <h5>Reunión Internacional 2023</h5>
@@ -288,7 +288,7 @@
                                         </div>-->
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/img_mediateka/convocatoria-2020.jpg" class="d-block w-100" alt="Taller LEAD">
+                                        <img src="assets/IMG/img_mediateka/convocatoria-2020.jpg" class="d-block w-100" alt="Taller LEAD">
                                         <!---
                                         <div class="carousel-caption">
                                             <h5>Taller de Liderazgo Ambiental</h5>
@@ -296,7 +296,7 @@
                                         </div>--->
                                     </div>
                                     <div class="carousel-item">
-                                        <img src="assets/img_mediateka/convocatoria-2021.jpg" class="d-block w-100" alt="Conferencia">
+                                        <img src="assets/IMG/img_mediateka/convocatoria-2021.jpg" class="d-block w-100" alt="Conferencia">
                                         <!---
                                         <div class="carousel-caption">
                                             <h5>Conferencia Anual</h5>
@@ -344,7 +344,7 @@
                                     <div class="carousel-item active">
                                         <div class="video-container">
                                             <video controls width="100%">
-                                                <source src="assets/videoMediateka/COSTA RICA IN 4K 60fps HDR (ULTRA HD).mp4" type="video/mp4">
+                                                <source src="assets/IMG/videoMediateka/COSTA RICA IN 4K 60fps HDR (ULTRA HD).mp4" type="video/mp4">
                                                 Tu navegador no soporta el elemento de video.
                                             </video>
                                             <div class="carousel-caption">
@@ -356,7 +356,7 @@
                                     <div class="carousel-item">
                                         <div class="video-container">
                                             <video controls width="100%">
-                                                <source src="assets/videoMediateka/Puente.mp4" type="video/mp4">
+                                                <source src="assets/IMG/videoMediateka/Puente.mp4" type="video/mp4">
                                                 Tu navegador no soporta el elemento de video.
                                             </video>
                                             <div class="carousel-caption">
@@ -443,6 +443,6 @@
     <?php include 'footer.php'; ?>
 
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </html>
