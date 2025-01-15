@@ -529,10 +529,11 @@
     .road-hero {
         position: relative;
         width: 100%;
-        min-height: 400px; /* Cambiado de height fijo a min-height */
-        background-image: url('assets/fondo_carretera.png');
-        background-size: cover;
-        background-position: center;
+        height: 100vh; /* Esto hace que ocupe el 100% del alto de la ventana */
+        background-image: url("/LEAD_PROJECT/assets/fondocarretera.png");
+        background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+        background-position: center; /* Centra la imagen */
+        background-repeat: no-repeat; /* Evita que la imagen se repita */
         display: flex;
         align-items: center;
         justify-content: center;
