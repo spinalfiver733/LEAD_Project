@@ -235,6 +235,11 @@
     <?php include 'header.php'; ?>
 
     <main>
+
+        <section class="hero">
+            <?php include 'header-lead.php'; ?>
+        </section>
+        
         <div class="mediateka-container">
             <h2 class="council-title">MEDIATECA LEAD MÉXICO</h2>
             

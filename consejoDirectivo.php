@@ -135,6 +135,11 @@
     <?php include 'header.php'; ?>
 
     <main>
+        
+        <section class="hero">
+            <?php include 'header-lead.php'; ?>
+        </section>
+
         <div class="council-container">
             <h2 class="council-title">CONSEJO DIRECTIVO LEAD-MÉXICO</h2>
             

@@ -147,6 +147,35 @@
         cursor: pointer;
     }
 
+    .lead-header {
+        text-align: center;
+        margin-bottom: 30px;
+    }
+    
+    .lead-header h2 {
+        color: var(--primary-light);
+        font-size: 2em;
+        margin-bottom: 5px;
+    }
+    
+    .lead-header p {
+        color: var(--primary-light);
+        font-size: 1.22em;
+    }
+    
+    .hero-cta {
+        text-align: center;
+    }
+    
+    .hero-cta button {
+        background-color: transparent;
+        border: 2px solid #000;
+        color: #000;
+        padding: 10px 30px;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
     .image-grid {
         display: grid;
         grid-template-columns: repeat(5, 1fr);

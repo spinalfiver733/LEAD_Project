@@ -176,6 +176,11 @@
     <?php include 'header.php'; ?>
 
     <main>
+
+        <section class="hero">
+            <?php include 'header-lead.php'; ?>
+        </section>
+        
         <div class="whos-lead-container">
             <section class="lead-intro">
                 <h2 class="council-title">PROGRAMA LEAD-MÉXICO</h2>

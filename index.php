@@ -16,9 +16,10 @@
     <main>
         
         <section class="hero">
-            <h2>Leadership For Environment And Development (LEAD)</h2>
-            <p><strong>is a global network of people and organizations committed to sustainable development</strong></p>
-            <button>CONSULTA PROYECTOS</button>
+            <?php include 'header-lead.php'; ?>
+            <div class="hero-cta">
+                <button>CONSULTA PROYECTOS</button>
+            </div>
         </section>
 
         <section class="info-cards">

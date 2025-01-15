@@ -127,6 +127,11 @@
     <?php include 'header.php'; ?>
 
     <main>
+
+        <section class="hero">
+            <?php include 'header-lead.php'; ?>
+        </section>
+
         <div class="staff-container">
             <h2 class="council-title">STAFF LEAD-MÉXICO</h2>
             
