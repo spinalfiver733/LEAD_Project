@@ -370,7 +370,20 @@
         margin: 0;
         text-align: center;
         font-weight: bold;
-        white-space: nowrap; /* Esta es la línea que mantiene el texto en una línea */
+        white-space: nowrap; /* Previene saltos de línea */
+        overflow: hidden; /* Previene desbordamiento */
+        text-overflow: ellipsis; /* Muestra ... si el texto es muy largo */
+        width: 100%; /* Asegura que tome todo el ancho disponible */
+        display: block; /* Cambiamos a block para mejor control */
+        -webkit-white-space: nowrap; /* Soporte para Safari */
+        -moz-white-space: nowrap; /* Soporte para Firefox */
+        -ms-white-space: nowrap; /* Soporte para IE/Edge */
+    }
+
+    /* Forzamos el estilo incluso con mayor especificidad */
+    .info-cards .card h3 {
+        white-space: nowrap !important;
+        width: 100% !important;
     }
 
     .card-container button {
