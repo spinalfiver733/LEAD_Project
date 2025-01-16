@@ -161,7 +161,7 @@
         <!-- Estructura HTML -->
         <div class="main-container">
             <h2 class="council-title"><span>Consejo Directivo</span></h2>
-            
+            <br>
             <div class="council-grid">
                 <!-- Primer miembro -->
                 <div class="council-member">

@@ -9,6 +9,26 @@
     <link rel="icon" type="image/x-icon" href="assets/LogoLEAD.webp">
     <link rel="stylesheet" href="assets/CSS/estilos.css">
     <style>
+        /*FUENTES DE LA PÁGINA*/
+        @font-face {
+            font-family: 'DaxBold';
+            src: url('assets/fonts/dax/Dax Bold/Dax Bold.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Poppins Regular';
+            src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Poppins Medium';
+            src: url('assets/fonts/Poppins/Poppins-Medium.ttf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Poppins Bold';
+            src: url('assets/fonts/Poppins/Poppins-Bold.ttf') format('opentype');
+        }
         .publicaciones-container {
             max-width: 1200px;
             margin: 0 auto;
@@ -134,7 +154,7 @@
 
         <div class="publicaciones-container">
             <h2 class="council-title"><span>Publicaciones</span></h2>
-
+            <br>
             <div class="biblioteca">
                 <!-- Sección Cuadernos de Viaje -->
                 <div class="seccion-libros">

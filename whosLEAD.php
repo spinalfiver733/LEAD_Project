@@ -183,6 +183,7 @@
         
         <div class="main-container">
             <h2 class="council-title"><span>Programa LEAD-México</span></h2>
+            <br>
             <section class="lead-intro">
                 <div class="mission-section">
                     <h3>Misión</h3>

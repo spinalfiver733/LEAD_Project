@@ -55,7 +55,7 @@
         <!-- Estructura HTML -->
         <div class="main-container">
             <h2 class="council-title"><span>Asociados</span></h2>
-
+            <br>
             <img src="assets\IMG\Asociados\LogosAsociados.webp" alt="Logos Asociados" title="Logos Asociados">
         </div>
     </main>

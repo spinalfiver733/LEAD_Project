@@ -791,6 +791,7 @@ footer {
     padding: 0.5rem 2rem;
     border-radius: 50px; /* Volvemos a añadir los bordes redondeados */
     margin: 0;
+    font-family: 'DaxBold',sans-serif;
 }
 
 /* Responsive Design */

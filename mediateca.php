@@ -9,6 +9,27 @@
     <link rel="icon" type="image/x-icon" href="assets/LogoLEAD.webp">
     <link rel="stylesheet" href="assets/CSS/estilos.css">
     <style>
+        /*FUENTES DE LA PÁGINA*/
+        @font-face {
+            font-family: 'DaxBold';
+            src: url('assets/fonts/dax/Dax Bold/Dax Bold.otf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Poppins Regular';
+            src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Poppins Medium';
+            src: url('assets/fonts/Poppins/Poppins-Medium.ttf') format('opentype');
+        }
+
+        @font-face {
+            font-family: 'Poppins Bold';
+            src: url('assets/fonts/Poppins/Poppins-Bold.ttf') format('opentype');
+        }
+
         .mediateka-container {
             padding: 1rem 2rem 2rem 2rem;
             background-color: #f8f9fa;
@@ -222,7 +243,7 @@
         
         <div class="mediateka-container">
             <h2 class="council-title"><span>Mediateca</span></h2>
-            
+            <br>
             <ul class="nav nav-tabs" id="mediatekaTab" role="tablist">
                 <li class="nav-item" role="presentation">
                     <button class="nav-link active" id="fotos-tab" data-bs-toggle="tab" data-bs-target="#fotos" type="button" role="tab" aria-controls="fotos" aria-selected="true">Galería de Fotos</button>

@@ -32,7 +32,11 @@
             <li><a href="publicaciones.php"><strong>Publicaciones</strong></li></a>
             <li><a href="mediateca.php"><strong>Mediateca</strong></a></li>
             <li><a href="asociados.php"><strong>Asociados</strong></a></li>
-            <li><strong>Solicitud de ingreso</strong></li>
+            <li>
+                <a href="assets\archivosPDF\SolicitudIngreso\ApplicationFormCohort16.doc.pdf" download style="text-decoration: none; cursor: pointer;">
+                    <strong>Solicitud de ingreso</strong>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>

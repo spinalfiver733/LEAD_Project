@@ -133,7 +133,6 @@
 
         <div class="main-container">
             <h2 class="council-title"><span>Staff</span></h2>
-            
             <div class="staff-list">
                 <div class="staff-member">
                     <div class="member-role">COORDINADOR</div>
