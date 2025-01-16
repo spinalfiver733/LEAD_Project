@@ -10,12 +10,30 @@
     <link rel="stylesheet" href="assets/CSS/estilos.css">
 </head>
 <style>
-    /* Estilos específicos para Who's LEAD */
-    .whos-lead-container {
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 1rem 1rem;
-        background-color: #f8f9fa; /* Sutil color de fondo para crear contraste */
+    /*FUENTES DE LA PÁGINA*/
+    @font-face {
+        font-family: 'DaxBold';
+        src: url('assets/fonts/dax/Dax Bold/Dax Bold.otf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Poppins Regular';
+        src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Poppins Medium';
+        src: url('assets/fonts/Poppins/Poppins-Medium.ttf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Poppins Bold';
+        src: url('assets/fonts/Poppins/Poppins-Bold.ttf') format('opentype');
+    }
+
+    .main-container {
+        padding: 1rem 2rem 2rem 2rem;
+        background-color: #f8f9fa;
     }
 
 
@@ -136,7 +154,7 @@
 
     /* Media Queries */
     @media (max-width: 768px) {
-        .whos-lead-container {
+        .main-container {
             padding: 2rem 1rem;
         }
 
@@ -163,7 +181,7 @@
             <?php include 'header-lead.php'; ?>
         </section>
         
-        <div class="whos-lead-container">
+        <div class="main-container">
             <h2 class="council-title"><span>Programa LEAD-México</span></h2>
             <section class="lead-intro">
                 <div class="mission-section">

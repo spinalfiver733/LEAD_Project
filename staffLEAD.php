@@ -10,97 +10,116 @@
     <link rel="stylesheet" href="assets/CSS/estilos.css">
 </head>
 <style>
+    /*FUENTES DE LA PÁGINA*/
+    @font-face {
+        font-family: 'DaxBold';
+        src: url('assets/fonts/dax/Dax Bold/Dax Bold.otf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Poppins Regular';
+        src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Poppins Medium';
+        src: url('assets/fonts/Poppins/Poppins-Medium.ttf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Poppins Bold';
+        src: url('assets/fonts/Poppins/Poppins-Bold.ttf') format('opentype');
+    }
+
     /* Contenedor principal */
-.staff-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 4rem 10rem;
-    background-color: #f8f9fa;
-}
-
-/* Lista de staff */
-.staff-list {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    margin-top: 3rem;
-}
-
-/* Estilo de cada miembro */
-.staff-member {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    border-left: 4px solid var(--primary-light);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.staff-member:hover {
-    transform: translateX(10px);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Rol del miembro */
-.member-role {
-    color: var(--primary-light);
-    font-weight: bold;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    margin-bottom: 0.5rem;
-}
-
-/* Información del miembro */
-.member-info h3 {
-    color: var(--primary-dark);
-    font-size: 1.25rem;
-    margin-bottom: 0.5rem;
-}
-
-.member-info .position {
-    color: #666;
-    font-weight: 500;
-    margin-bottom: 0.5rem;
-}
-
-.member-info .institution {
-    color: #666;
-    font-size: 0.95rem;
-    margin-bottom: 0.25rem;
-}
-
-.member-info .email {
-    display: inline-block;
-    color: var(--primary-light) !important;
-    text-decoration: none;
-    margin-top: 0.5rem;
-    transition: color 0.3s ease;
-}
-
-.member-info .email:hover {
-    color: var(--primary-dark) !important;
-    text-decoration: underline !important;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .staff-container {
-        padding: 2rem 1rem;
+    .main-container {
+        padding: 1rem 2rem 2rem 2rem;
+        background-color: #f8f9fa;
     }
 
-    .council-title {
-        font-size: 2em;
+    /* Lista de staff */
+    .staff-list {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 3rem;
     }
 
+    /* Estilo de cada miembro */
     .staff-member {
-        padding: 1.25rem;
+        background-color: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+        border-left: 4px solid var(--primary-light);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .staff-member:hover {
-        transform: none;
+        transform: translateX(10px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
-}
+
+    /* Rol del miembro */
+    .member-role {
+        color: var(--primary-light);
+        font-weight: bold;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Información del miembro */
+    .member-info h3 {
+        color: var(--primary-dark);
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .member-info .position {
+        color: #666;
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    .member-info .institution {
+        color: #666;
+        font-size: 0.95rem;
+        margin-bottom: 0.25rem;
+    }
+
+    .member-info .email {
+        display: inline-block;
+        color: var(--primary-light) !important;
+        text-decoration: none;
+        margin-top: 0.5rem;
+        transition: color 0.3s ease;
+    }
+
+    .member-info .email:hover {
+        color: var(--primary-dark) !important;
+        text-decoration: underline !important;
+    }
+
+    /* Media Queries */
+    @media (max-width: 768px) {
+        .main-container {
+            padding: 2rem 1rem;
+        }
+
+        .council-title {
+            font-size: 2em;
+        }
+
+        .staff-member {
+            padding: 1.25rem;
+        }
+
+        .staff-member:hover {
+            transform: none;
+        }
+    }
 </style>
 <body>
 
@@ -112,7 +131,7 @@
             <?php include 'header-lead.php'; ?>
         </section>
 
-        <div class="staff-container">
+        <div class="main-container">
             <h2 class="council-title"><span>Staff</span></h2>
             
             <div class="staff-list">

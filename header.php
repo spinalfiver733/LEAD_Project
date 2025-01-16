@@ -31,7 +31,7 @@
             <li><a href="staffLEAD.php"><strong>Staff</strong></a></li>
             <li><a href="publicaciones.php"><strong>Publicaciones</strong></li></a>
             <li><a href="mediateca.php"><strong>Mediateca</strong></a></li>
-            <li><strong>Asociados</strong></li>
+            <li><a href="asociados.php"><strong>Asociados</strong></a></li>
             <li><strong>Solicitud de ingreso</strong></li>
         </ul>
     </nav>
