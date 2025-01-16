@@ -615,7 +615,7 @@ header {
     position: relative;
     width: 100%;
     height: calc(100vh - 100px); /* Reduce 100px en total (50px arriba y 50px abajo) */
-    background-image: url("/LEAD_PROJECT/assets/fondocarretera.png");
+    background-image: url("https://systemx.com.mx/LEAD_Project/assets/fondocarretera.png");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -857,23 +857,32 @@ footer {
         width: 100%;
         max-width: 300px;
         margin: 0 auto;
-        padding-top: 2rem;
+        padding-top: 1rem;
     }
 
     .numbers {
         display: flex;
-        justify-content: space-between;
+        flex-direction: column; 
+        align-items: flex-start;
         gap: 1rem;
-        flex-wrap: nowrap;
     }
 
     .numbers span {
-        text-align: center;
-        flex: 1;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        width: 100%;
     }
 
     .numbers h2 {
-        font-size: 1.5em;
+        font-size: 2rem;
+        margin: 0;
+        white-space: nowrap;
+    }
+
+    .stats p {
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
     }
 
     /* Reuniones */
