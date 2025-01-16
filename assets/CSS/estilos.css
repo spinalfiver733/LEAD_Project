@@ -158,8 +158,9 @@ header {
 /* Hero Section */
 .hero {
     text-align: center;
-    padding: 5px 5px;
-    background-color: #fff;
+    padding-top:10px;
+    padding-bottom: 5px;
+    background-color: #E6E6E6;
 }
 
 .hero h1 {
@@ -171,7 +172,6 @@ header {
 .hero p {
     color: var(--primary-light);
     font-size: 1.22em;
-    margin-bottom: 30px;
 }
 
 .hero button {
@@ -186,6 +186,7 @@ header {
 .lead-header {
     text-align: center;
     margin-bottom: 30px;
+    background-color: #e6e6e6;
 }
 
 .lead-header h1 {

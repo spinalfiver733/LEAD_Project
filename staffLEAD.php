@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LEAD México</title>
+    <title>LEAD México - Staff</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/LogoLEAD.webp">
     <link rel="stylesheet" href="assets/CSS/estilos.css">
-</head>
 <style>
+
     /*FUENTES DE LA PÁGINA*/
     @font-face {
         font-family: 'DaxBold';
@@ -31,157 +31,247 @@
         src: url('assets/fonts/Poppins/Poppins-Bold.ttf') format('opentype');
     }
 
-    /* Contenedor principal */
     .main-container {
         padding: 1rem 2rem 2rem 2rem;
+        background-color: #fff;
+    }
+
+    .council-title {
+        text-align: center;
+        margin-bottom: 3rem;
+        color: var(--primary-dark);
+        font-size: 2.5em;
+    }
+
+    .council-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .council-member {
+        display: flex;
+        background-color: white;
+        overflow: hidden;
+    }
+
+    .member-left {
+        width: 50%;
+        padding: 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         background-color: #f8f9fa;
     }
 
-    /* Lista de staff */
-    .staff-list {
+    .member-image-container {
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 1.5rem;
+    }
+
+    .member-image-container img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    .member-name {
+        text-align: center;
+        background: var(--primary-dark);
+        padding: 5px;
+        width: 100%;
+    }
+
+    .member-name h3 {
+        color: white;
+        font-size: 1.2rem;
+        margin: 0;
+        font-family: 'DaxBold', sans-serif;
+    }
+
+    .member-right {
+        width: 50%;
+        padding: 1.5rem;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
-        margin-top: 3rem;
+        justify-content: center;
+        gap: 1rem;
     }
 
-    /* Estilo de cada miembro */
-    .staff-member {
-        background-color: white;
-        padding: 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-        border-left: 4px solid var(--primary-light);
-        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    .member-position p {
+        font-size: 1rem;
+        color: white;
+        line-height: 1.4;
+        margin: 0;
+        background: var(--primary-light);
+        padding: 8px;
+        text-align: center;
+        font-family: 'DaxBold', sans-serif;
     }
 
-    .staff-member:hover {
-        transform: translateX(10px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    .member-email {
+        text-align: center;
     }
 
-    /* Rol del miembro */
-    .member-role {
-        color: var(--primary-light);
-        font-weight: bold;
-        font-size: 0.9rem;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        margin-bottom: 0.5rem;
-    }
-
-    /* Información del miembro */
-    .member-info h3 {
+    .member-email a {
         color: var(--primary-dark);
-        font-size: 1.25rem;
-        margin-bottom: 0.5rem;
-    }
-
-    .member-info .position {
-        color: #666;
-        font-weight: 500;
-        margin-bottom: 0.5rem;
-    }
-
-    .member-info .institution {
-        color: #666;
-        font-size: 0.95rem;
-        margin-bottom: 0.25rem;
-    }
-
-    .member-info .email {
-        display: inline-block;
-        color: var(--primary-light) !important;
         text-decoration: none;
-        margin-top: 0.5rem;
-        transition: color 0.3s ease;
+        font-weight: 600;
+        font-size: 0.9rem;
+        font-family: 'DaxBold', sans-serif;
     }
 
-    .member-info .email:hover {
-        color: var(--primary-dark) !important;
-        text-decoration: underline !important;
+    .member-email a:hover {
+        text-decoration: underline;
     }
 
-    /* Media Queries */
+    @media (max-width: 1200px) {
+        .council-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+
     @media (max-width: 768px) {
-        .main-container {
-            padding: 2rem 1rem;
+        .council-member {
+            flex-direction: column;
         }
 
-        .council-title {
-            font-size: 2em;
+        .member-left,
+        .member-right {
+            width: 100%;
+            padding: 1.5rem;
         }
 
-        .staff-member {
-            padding: 1.25rem;
-        }
-
-        .staff-member:hover {
-            transform: none;
+        .member-image-container {
+            width: 120px;
+            height: 120px;
         }
     }
 </style>
+</head>
 <body>
-
     <?php include 'header.php'; ?>
 
     <main>
 
-        <section class="hero">
-            <?php include 'header-lead.php'; ?>
-        </section>
+    <section class="hero">
+        <?php include 'header-lead.php'; ?>
+    </section>
 
         <div class="main-container">
             <h2 class="council-title"><span>Staff</span></h2>
-            <div class="staff-list">
-                <div class="staff-member">
-                    <div class="member-role">COORDINADOR</div>
-                    <div class="member-info">
-                        <h3>Boris Gregorio Graizbord Ed</h3>
-                        <p class="position">Profesor-Investigador</p>
-                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
-                        <p class="institution">El Colegio de México</p>
-                        <a href="mailto:graizbord@lead.colmex.mx" class="email">graizbord@lead.colmex.mx</a>
+            <div class="council-grid">
+                <!-- Coordinador -->
+                <div class="council-member">
+                    <div class="member-left">
+                        <div class="member-image-container">
+                            <img src="assets\IMG\Fotos Staff\Boris.webp" alt="Boris Gregorio Graizbord Ed">
+                        </div>
+                        <div class="member-name">
+                            <h3>Boris Gregorio Graizbord Ed</h3>
+                        </div>
+                    </div>
+                    <div class="member-right">
+                        <div class="member-position">
+                            <p>COORDINADOR<br>
+                            Profesor-Investigador<br>
+                            Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)<br>
+                            El Colegio de México</p>
+                        </div>
+                        <div class="member-email">
+                            <a href="mailto:graizbord@lead.colmex.mx">graizbord@lead.colmex.mx</a>
+                        </div>
                     </div>
                 </div>
-        
-                <div class="staff-member">
-                    <div class="member-role">COORDINADORA ACADÉMICA</div>
-                    <div class="member-info">
-                        <h3>Amira Solano Azar</h3>
-                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
-                        <p class="institution">El Colegio de México</p>
-                        <a href="mailto:asolano@colmex.mx" class="email">asolano@colmex.mx</a>
+
+                <!-- Coordinadora Académica -->
+                <div class="council-member">
+                    <div class="member-left">
+                        <div class="member-image-container">
+                            <img src="assets\IMG\Fotos Staff\Amira.webp" alt="Amira Solano Azar">
+                        </div>
+                        <div class="member-name">
+                            <h3>Amira Solano Azar</h3>
+                        </div>
+                    </div>
+                    <div class="member-right">
+                        <div class="member-position">
+                            <p>COORDINADORA ACADÉMICA<br>
+                            Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)<br>
+                            El Colegio de México</p>
+                        </div>
+                        <div class="member-email">
+                            <a href="mailto:asolano@colmex.mx">asolano@colmex.mx</a>
+                        </div>
                     </div>
                 </div>
-        
-                <div class="staff-member">
-                    <div class="member-role">ASISTENTE INVESTIGACIÓN</div>
-                    <div class="member-info">
-                        <h3>Omar López Ibarra</h3>
-                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
-                        <p class="institution">El Colegio de México</p>
-                        <a href="mailto:olopez@colmex.mx" class="email">olopez@colmex.mx</a>
+
+                <!-- Asistente Investigación -->
+                <div class="council-member">
+                    <div class="member-left">
+                        <div class="member-image-container">
+                            <img src="assets\IMG\Fotos Staff\Omar.webp" alt="Omar López Ibarra">
+                        </div>
+                        <div class="member-name">
+                            <h3>Omar López Ibarra</h3>
+                        </div>
+                    </div>
+                    <div class="member-right">
+                        <div class="member-position">
+                            <p>ASISTENTE INVESTIGACIÓN<br>
+                            Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)<br>
+                            El Colegio de México</p>
+                        </div>
+                        <div class="member-email">
+                            <a href="mailto:olopez@colmex.mx">olopez@colmex.mx</a>
+                        </div>
                     </div>
                 </div>
-        
-                <div class="staff-member">
-                    <div class="member-role">ASISTENTE ADMINISTRATIVO</div>
-                    <div class="member-info">
-                        <h3>César Montenegro Silva</h3>
-                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
-                        <p class="institution">El Colegio de México</p>
-                        <a href="mailto:cmonte@colmex.mx" class="email">cmonte@colmex.mx</a>
+
+                <!-- Asistente Administrativo -->
+                <div class="council-member">
+                    <div class="member-left">
+                        <div class="member-image-container">
+                            <img src="assets\IMG\Fotos Staff\Cesar.webp" alt="César Montenegro Silva">
+                        </div>
+                        <div class="member-name">
+                            <h3>César Montenegro Silva</h3>
+                        </div>
+                    </div>
+                    <div class="member-right">
+                        <div class="member-position">
+                            <p>ASISTENTE ADMINISTRATIVO<br>
+                            Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)<br>
+                            El Colegio de México</p>
+                        </div>
+                        <div class="member-email">
+                            <a href="mailto:cmonte@colmex.mx">cmonte@colmex.mx</a>
+                        </div>
                     </div>
                 </div>
-        
-                <div class="staff-member">
-                    <div class="member-role">SECRETARIA</div>
-                    <div class="member-info">
-                        <h3>Vanessa Salmerón Braulio</h3>
-                        <p class="institution">Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)</p>
-                        <p class="institution">El Colegio de México</p>
-                        <a href="mailto:vsalmeron@colmex.mx" class="email">vsalmeron@colmex.mx</a>
+
+                <!-- Secretaria -->
+                <div class="council-member">
+                    <div class="member-left">
+                        <div class="member-image-container">
+                            <img src="assets\IMG\Fotos Staff\Vanessa.webp" alt="Vanessa Salmerón Braulio">
+                        </div>
+                        <div class="member-name">
+                            <h3>Vanessa Salmerón Braulio</h3>
+                        </div>
+                    </div>
+                    <div class="member-right">
+                        <div class="member-position">
+                            <p>SECRETARIA<br>
+                            Centro de Estudios Demográficos Urbanos y Ambientales (CEDUA)<br>
+                            El Colegio de México</p>
+                        </div>
+                        <div class="member-email">
+                            <a href="mailto:vsalmeron@colmex.mx">vsalmeron@colmex.mx</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -189,8 +279,5 @@
     </main>
     
     <?php include 'footer.php'; ?>
-    
 </body>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
 </html>
