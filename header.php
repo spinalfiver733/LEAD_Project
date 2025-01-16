@@ -29,7 +29,7 @@
             <li><a href="whosLEAD.php"><strong>¿Qué es Lead?</strong></a></li>
             <li><a href="consejoDirectivo.php"><strong>Consejo Directivo</strong></a></li>
             <li><a href="staffLEAD.php"><strong>Staff</strong></a></li>
-            <li><strong>Publicaciones</strong></li>
+            <li><a href="publicaciones.php"><strong>Publicaciones</strong></li></a>
             <li><a href="mediateca.php"><strong>Mediateca</strong></a></li>
             <li><strong>Asociados</strong></li>
             <li><strong>Solicitud de ingreso</strong></li>

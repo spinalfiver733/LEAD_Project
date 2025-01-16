@@ -37,7 +37,17 @@
 
     @font-face {
         font-family: 'Poppins Regular';
-        src: url('assets\fonts\Poppins\Poppins-Regular.ttf') format('opentype');
+        src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Poppins Medium';
+        src: url('assets/fonts/Poppins/Poppins-Medium.ttf') format('opentype');
+    }
+
+    @font-face {
+        font-family: 'Poppins Bold';
+        src: url('assets/fonts/Poppins/Poppins-Bold.ttf') format('opentype');
     }
     
 
@@ -220,7 +230,10 @@
     /* Info Cards Section */
     .info-cards {
         background-color: var(--primary-light);
-        padding: 100px;
+        padding-top: 100px;
+        padding-right: 100px;
+        padding-bottom: 50px;
+        padding-left: 100px;
         color: white;
         display: grid;
         grid-template-columns: repeat(2, 1fr) 2fr;
@@ -228,6 +241,7 @@
         column-gap: 100px; 
         row-gap: 30px;  
         grid-template-areas: 
+            ". . reuniones"
             "programa consejo reuniones"
             "stats stats reuniones";
     }
@@ -262,7 +276,7 @@
     .stats {
         grid-area: stats;
         position: relative; /* Para el hr superior */
-        padding-top: 30px; /* Espacio para el hr */
+        padding-top: 20px; /* Espacio para el hr */
         text-align: center;
     }
 
@@ -277,8 +291,9 @@
     }
     
     .stats p {
-        font-size: 1.2em;
+        font-size: 15px;
         margin-bottom: 15px;
+        font-family: 'Poppins Bold' , sans-serif;
     }
 
     .numbers {
@@ -287,16 +302,26 @@
         gap: 50px;
         margin-top: 20px;
     }
-
+    
     .numbers span {
         display: flex;
-        flex-direction: column;
         align-items: center;
+        color: white;
+        padding-right: 20px;  /* Espacio entre el contenido y la línea */
+        border-right: 1px solid white;  /* Línea vertical blanca */
+        font-size: 20px;/* Tamaño de la letra */
+        font-family: 'DaxBold', sans-serif;
     }
-
+    
     .numbers h2 {
         margin: 0;
-        font-size: 2em;
+        font-size: 44px;
+        margin-right: 5px;
+        font-family: 'Poppins Medium', sans-serif;
+    }
+
+    .numbers span:last-child {
+        border-right: none;
     }
     
     .reuniones {
@@ -392,6 +417,8 @@
         border: none;
         padding: 0px;
         cursor: pointer;
+        font-size: 18px;
+        font-family: 'Poppins Bold', sans-serif;
     }
 
     .map {
@@ -713,6 +740,8 @@
         color: white;
         font-size: 2.5em;
         margin-bottom: 30px;
+        font-size: 80px;
+        font-family: 'Dax Bold' sans-serif;
     }
 
     .history-cta button {

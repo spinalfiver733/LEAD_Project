@@ -31,24 +31,24 @@
         <section class="info-cards">
             <div class="card-container">
                 <div class="card">
-                    <h3>PROGRAMA ANUAL</h3>
+                    <h3><strong>PROGRAMA ANUAL</strong></h3>
                 </div>
-                <button>CONSULTAR</button>
+                <button><strong>CONSULTAR</strong></button>
             </div>
             
             <div class="card-container">
                 <div class="card">
-                    <h3>CONSEJO DIRECTIVO</h3>
+                    <h3><strong>CONSEJO DIRECTIVO</strong></h3>
                 </div>
-                <button>CONSULTAR</button>
+                <button><strong>CONSULTAR</strong></button>
             </div>
             
             <div class="stats">
-                <p style="text-align:left;">HASTA EL 2009:</p>
+                <p style="text-align:left;"><strong>HASTA EL 2009:</strong></p>
                 <div class="numbers">
-                    <span><h2>196</h2> miembros</span>
-                    <span><h2>43%</h2> mujeres</span>
-                    <span><h2>57%</h2> hombres</span>
+                    <span><h2>196</h2>&nbsp;miembros</span>
+                    <span><h2>43%</h2>&nbsp;mujeres</span>
+                    <span><h2>57%</h2>&nbsp;hombres</span>
                 </div> 
             </div>
             
@@ -101,7 +101,7 @@
         </section>
 
         <section class="history-cta">
-            <h2>Conoce la historia <br> de LEAD México</h2>
+            <h2><strong>Conoce la historia <br> de LEAD México</strong></h2>
             <button>CONSULTAR</button>
         </section>
 

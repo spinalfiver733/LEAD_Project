@@ -164,8 +164,8 @@
         </section>
         
         <div class="whos-lead-container">
+            <h2 class="council-title"><span>Programa LEAD-México</span></h2>
             <section class="lead-intro">
-                <h2 class="council-title"><span>Programa LEAD-México</span></h2>
                 <div class="mission-section">
                     <h3>Misión</h3>
                     <p>El objetivo fundamental del Programa LEAD-México es establecer una plataforma para impulsar la formación de líderes con un conocimiento profundo sobre las metas del desarrollo sustentable y los retos ambientales que México y el mundo enfrentan.</p>
