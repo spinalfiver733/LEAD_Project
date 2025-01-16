@@ -9,6 +9,28 @@
     <link rel="stylesheet" href="assets/CSS/estilos.css">
     <link rel="icon" type="image/x-icon" href="assets/LogoLEAD.webp">
 </head>
+<style>
+    /*FUENTES DE LA PÁGINA*/
+    @font-face {
+    font-family: 'DaxBold';
+    src: url('assets/fonts/dax/Dax Bold/Dax Bold.otf') format('opentype');
+    }
+
+    @font-face {
+    font-family: 'Poppins Regular';
+    src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('opentype');
+    }
+
+    @font-face {
+    font-family: 'Poppins Medium';
+    src: url('assets/fonts/Poppins/Poppins-Medium.ttf') format('opentype');
+    }
+
+    @font-face {
+    font-family: 'Poppins Bold';
+    src: url('assets/fonts/Poppins/Poppins-Bold.ttf') format('opentype');
+    }
+</style>
 <body>
 
     <?php include 'header.php'; ?>

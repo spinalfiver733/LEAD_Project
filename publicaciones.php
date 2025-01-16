@@ -8,140 +8,140 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="assets/LogoLEAD.webp">
     <link rel="stylesheet" href="assets/CSS/estilos.css">
-    <style>
-        /*FUENTES DE LA PÁGINA*/
-        @font-face {
-            font-family: 'DaxBold';
-            src: url('assets/fonts/dax/Dax Bold/Dax Bold.otf') format('opentype');
-        }
+<style>
+    /*FUENTES DE LA PÁGINA*/
+    @font-face {
+        font-family: 'DaxBold';
+        src: url('assets/fonts/dax/Dax Bold/Dax Bold.otf') format('opentype');
+    }
 
-        @font-face {
-            font-family: 'Poppins Regular';
-            src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('opentype');
-        }
+    @font-face {
+        font-family: 'Poppins Regular';
+        src: url('assets/fonts/Poppins/Poppins-Regular.ttf') format('opentype');
+    }
 
-        @font-face {
-            font-family: 'Poppins Medium';
-            src: url('assets/fonts/Poppins/Poppins-Medium.ttf') format('opentype');
-        }
+    @font-face {
+        font-family: 'Poppins Medium';
+        src: url('assets/fonts/Poppins/Poppins-Medium.ttf') format('opentype');
+    }
 
-        @font-face {
-            font-family: 'Poppins Bold';
-            src: url('assets/fonts/Poppins/Poppins-Bold.ttf') format('opentype');
-        }
-        .publicaciones-container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 1rem 1rem;
-            background-color: #f8f9fa;
-        }
+    @font-face {
+        font-family: 'Poppins Bold';
+        src: url('assets/fonts/Poppins/Poppins-Bold.ttf') format('opentype');
+    }
+    .publicaciones-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1rem 1rem;
+        background-color: #f8f9fa;
+    }
 
-        .biblioteca {
-            margin: 2rem 0;
-        }
+    .biblioteca {
+        margin: 2rem 0;
+    }
 
-        .seccion-libros {
-            margin-bottom: 1px;
-            position: relative;
-            min-height: 300px;
-        }
+    .seccion-libros {
+        margin-bottom: 1px;
+        position: relative;
+        min-height: 300px;
+    }
 
-        .titulo-seccion {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-bottom: 1rem;
-            color: #5cb439;
-            padding: 0 1rem;
-        }
+    .titulo-seccion {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 1rem;
+        color: #5cb439;
+        padding: 0 1rem;
+    }
 
-        .repisa-imagen {
-            width: 100%;
-            height: auto;
-            max-width: 1100px;
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            z-index: 1;
-        }
+    .repisa-imagen {
+        width: 100%;
+        height: auto;
+        max-width: 1100px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: 1;
+    }
 
+    .libros-container {
+        position: absolute;
+        top: 0;
+        left: 8%;
+        right: 8%;
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 40px;
+        z-index: 2;
+    }
+
+    .libro {
+        width: 100%;
+        height: auto;
+        max-height: 160px;
+        object-fit: contain;
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
+
+    .libro:hover {
+        transform: scale(1.3);
+        z-index: 10;
+    }
+
+    .libro.hiding {
+        opacity: 0;
+    }
+
+    .navigation-buttons {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        z-index: 3;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+    }
+
+    .nav-button {
+        background-color: white;
+        color: #1B5E20;
+        border: none;
+        padding: 8px 16px;
+        border-radius: 4px;
+        cursor: pointer;
+        opacity: 0.8;
+        transition: opacity 0.3s;
+    }
+
+    .nav-button:hover {
+        opacity: 1;
+    }
+
+    .nav-button:disabled {
+        background-color: #ccc;
+        cursor: not-allowed;
+    }
+
+    .ver-mas {
+        color: #1B5E20;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    .repisa-wrapper {
+        position: relative;
+        padding-top: 242px;
+    }
+
+    @media (max-width: 768px) {
         .libros-container {
-            position: absolute;
-            top: 0;
-            left: 8%;
-            right: 8%;
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 40px;
-            z-index: 2;
+            grid-template-columns: repeat(2, 1fr);
         }
-
-        .libro {
-            width: 100%;
-            height: auto;
-            max-height: 160px;
-            object-fit: contain;
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
-
-        .libro:hover {
-            transform: scale(1.3);
-            z-index: 10;
-        }
-
-        .libro.hiding {
-            opacity: 0;
-        }
-
-        .navigation-buttons {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 100%;
-            z-index: 3;
-            display: flex;
-            justify-content: space-between;
-            padding: 0 20px;
-        }
-
-        .nav-button {
-            background-color: white;
-            color: #1B5E20;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            cursor: pointer;
-            opacity: 0.8;
-            transition: opacity 0.3s;
-        }
-
-        .nav-button:hover {
-            opacity: 1;
-        }
-
-        .nav-button:disabled {
-            background-color: #ccc;
-            cursor: not-allowed;
-        }
-
-        .ver-mas {
-            color: #1B5E20;
-            text-decoration: none;
-            cursor: pointer;
-        }
-
-        .repisa-wrapper {
-            position: relative;
-            padding-top: 242px;
-        }
-
-        @media (max-width: 768px) {
-            .libros-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+    }
+</style>
 </head>
 <body>
 
