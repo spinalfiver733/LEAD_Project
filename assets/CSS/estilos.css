@@ -93,7 +93,8 @@
 
     /* Nuevo estilo específico para la imagen del texto */
     .main-header .texto-lead {
-        width: 750px; /* O el tamaño que prefieras */
+        width: 750px;
+        height: auto;
     }
 
     /* Aseguramos que el contenedor tenga suficiente espacio */
@@ -793,6 +794,28 @@
 
     /* Responsive Design */
     @media (max-width: 768px) {
+
+        .main-header {
+            flex-direction: column;
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Ajustamos específicamente la imagen del texto LEAD */
+        .main-header .texto-lead {
+            width: 100%; /* Cambiamos a ancho completo del contenedor */
+            max-width: 600px; /* Limitamos el ancho máximo */
+            height: auto;
+            margin: 10px 0; /* Agregamos margen vertical */
+        }
+
+        /* Ajustamos el logo también para mantener la proporción */
+        .main-header img {
+            width: 160px; /* Reducimos el tamaño del logo */
+            height: auto;
+            margin: 5px 0;
+        }
+
         /* Navegación */
         .top-nav ul,
         .main-nav ul {
