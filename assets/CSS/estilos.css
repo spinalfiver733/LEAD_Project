@@ -531,7 +531,7 @@ header {
     right: 0;
     transform: translateY(-50%);
     width: 2px; /* Grosor de la línea */
-    height: 450px; /* Ajusta la altura según necesites */
+    height: 440px; /* Ajusta la altura según necesites */
     background-color: white;
 }
 
