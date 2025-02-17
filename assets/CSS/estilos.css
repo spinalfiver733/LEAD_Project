@@ -245,12 +245,15 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr) 2fr;
     grid-template-rows: auto auto;
-    column-gap: 100px; 
-    row-gap: 30px;  
+    gap: 30px 15px;  /* row-gap column-gap */
     grid-template-areas: 
         ". . reuniones"
         "programa consejo reuniones"
         "stats stats reuniones";
+    /* Agregar margen específico a la columna de reuniones */
+    & > .reuniones {
+        margin-left: 200px; /* Aumenta este valor para más espacio */
+    }
 }
 
 .info-cards .card:nth-child(1) {
@@ -265,7 +268,8 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 20px 0; /* Opcional: para dar algo de espacio arriba y abajo */
+    padding: 40px 0; /* Opcional: para dar algo de espacio arriba y abajo */
+    margin-bottom: 10px;
 }
 
 .img-collage {
@@ -388,8 +392,8 @@ header {
 
 .card {
     background-color: white;
-    padding: 30px;
-    border-radius: 5px;
+    padding: 80px;
+    border-radius: 10px;
     width: 100%;
     min-height: 150px;
     display: flex;
@@ -474,7 +478,9 @@ header {
 .info_ubicacion:hover {
     background-color: #dcdcdc; /* Cambio sutil de color al pasar el mouse */
 }
-
+.location{
+    background-color: #5cb439;
+}
 /* Estilos para el contenedor del enlace */
 .location a {
     text-decoration: none;
@@ -491,6 +497,55 @@ header {
 /* Mantener el color del texto consistente */
 .location a p {
     color: #1d4d25 !important;
+}
+
+.bg-primary-light {
+    background-color: var(--primary-light);
+}
+
+/* Ajustes para mantener los estilos existentes en el nuevo layout */
+.history-cta {
+    padding: 60px 20px; /* Reducido el padding para ajustarse mejor al nuevo layout */
+}
+
+.location {
+    padding: 30px;
+    background-color: transparent;
+}
+
+.map {
+    border-radius: 10px;
+    overflow: hidden; /* Esto es importante para que el border-radius funcione con el iframe */
+}
+
+.map iframe {
+    border-radius: 10px;
+    width: 100%;
+    height: 300px;
+    border: 0;
+}
+
+.separator {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 2px; /* Grosor de la línea */
+    height: 450px; /* Ajusta la altura según necesites */
+    background-color: white;
+}
+
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .col-md-8, .col-md-4 {
+        width: 100%;
+        padding: 15px;
+    }
 }
 
 /* Program Cards */
