@@ -140,6 +140,7 @@
                         <button>CONSULTAR</button>
                     </section>
                 </div>
+
                 <!-- Sección Ubicación - 4 columnas -->
                 <div class="col-md-4">
                     <div class="location">
