@@ -151,8 +151,11 @@ header {
 }
 
 .main-nav li {
-    color: var(--primary-dark);
+    color: white;
     cursor: pointer;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: lighter;
 }
 
 /* Hero Section */
@@ -192,14 +195,14 @@ header {
 
 .lead-header h1 {
     color: var(--primary-dark);
-    font-size: 2.58em;
+    font-size: 3.2em;
     margin-bottom: 5px;
     font-family: 'DaxBold', sans-serif;
 }
 
 .lead-header p {
     color: var(--primary-dark);
-    font-size: 1.55em;
+    font-size: 2em;
     font-family: 'DaxBold', sans-serif;
     margin:0px;
 }
@@ -210,8 +213,8 @@ header {
 
 .hero-cta button {
     background-color: transparent;
-    border: 2px solid #000;
-    color: #000;
+    border: 2px solid var(--primary-light);
+    color: var(--primary-light);
     padding: 10px 30px;
     font-weight: bold;
     cursor: pointer;
