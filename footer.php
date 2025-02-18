@@ -1,3 +1,4 @@
+<link rel="stylesheet" href="assets/CSS/footer.css">
 <footer>
     <div class="footer-content">
         <div class="lead-international">

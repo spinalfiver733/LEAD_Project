@@ -20,12 +20,6 @@ footer {
     gap: 30px;
 }
 
-/* LEAD International Section */
-.footer-content .lead-international {
-    order: 1;
-    justify-self: start;
-}
-
 /* Contact Section */
 .footer-content .contact {
     order: 3;
@@ -103,8 +97,33 @@ footer {
     opacity: 0.8;
 }
 
+.footer-content .section-content li:first-child {
+    margin-bottom: 20px;
+}
+
+.footer-content .section-content li strong {
+    color: white; /* Color blanco para los títulos */
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Ajustes específicos para la sección de contacto */
+.footer-content .contact li {
+    line-height: 1.5;
+}
+
 /* Responsive Design */
 @media screen and (max-width: 768px) {
+
+    .footer-content > div {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0; /* Eliminamos el padding base */
+    }
+
+    .footer-content > div:last-child {
+        border-bottom: none; /* Elimina el borde de la última sección */
+    }
+    
     .footer-content {
         grid-template-columns: 1fr;
     }

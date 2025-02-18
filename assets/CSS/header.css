@@ -1,0 +1,186 @@
+/* header.css */
+
+/* Variables */
+:root {
+    --primary-dark: #286217;
+    --primary-light: #5cb439;
+}
+
+/* Reset para enlaces */
+a,
+a:link,
+a:visited,
+a:hover,
+a:active,
+a[href] {
+    text-decoration: none !important;
+    color: inherit !important;
+    -webkit-text-decoration: none !important;
+    -moz-text-decoration: none !important;
+    -ms-text-decoration: none !important;
+}
+
+/* Estilos del Header Principal */
+header {
+    width: 100%;
+}
+
+/* Main Header Container */
+.main-header {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 10px;
+    background-color: var(--primary-light);
+    gap: 20px;
+}
+
+.main-header a {
+    flex-shrink: 0;
+}
+
+.main-header img {
+    width: 300px;
+    height: auto;
+    margin-left: 35px;
+}
+
+/* Divisor Container */
+.divisor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    flex-grow: 1;
+    gap: 30px;
+    width: 100%;
+    padding-left: 20px;
+}
+
+/* Search Container */
+.search-container {
+    position: relative;
+    width: 200px;
+    margin: 0;
+}
+
+.search-container input {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+    margin-right: 40px;
+    color: var(--primary-dark);
+}
+
+.search-container input::placeholder {
+    color: var(--primary-dark);
+}
+
+.search-icon {
+    position: absolute;
+    right: 50px;
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1);
+    width: 20px !important;
+    height: 20px;
+}
+
+/* Texto LEAD */
+.texto-lead h1 {
+    color: white;
+    font-size: 2.3em;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    word-wrap: break-word;
+}
+
+/* Main Navigation */
+.main-nav {
+    background-color: var(--primary-light);
+    padding: 10px 0;
+    position: relative;
+    text-align: center;
+}
+
+.main-nav::after {
+    content: '';
+    position: absolute;
+    width: 92.5%;
+    height: 2px;
+    background-color: #fff;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 0;
+}
+
+.main-nav ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+    width: 93%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.main-nav li {
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 1.2em;
+}
+
+.main-nav li a {
+    transition: opacity 0.3s ease;
+}
+
+.main-nav li a:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .main-header img {
+        width: 160px;
+        height: auto;
+        margin: 5px 0;
+    }
+    
+    .divisor {
+        align-items: center;
+        width: 100%;
+    }
+    
+    .texto-lead h1 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    
+    .main-nav {
+        padding: 10px;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        padding: 0;
+    }
+
+    .search-container {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .search-container input {
+        margin-right: 0;
+    }
+
+    .search-icon {
+        right: 10px;
+    }
+}
