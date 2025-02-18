@@ -164,7 +164,7 @@ header {
     text-align: center;
     padding-top:10px;
     padding-bottom: 5px;
-    background-color: #E6E6E6;
+    background-color: #ffffff;
 }
 
 .hero h1 {
@@ -190,7 +190,7 @@ header {
 .lead-header {
     text-align: center;
     margin-bottom: 30px;
-    background-color: #e6e6e6;
+    background-color: #ffffff;
     margin-top: 20px;
 }
 
@@ -476,6 +476,9 @@ header {
     background-color: #dcdcdc; /* Cambio sutil de color al pasar el mouse */
 }
 
+.location{
+    background-color: var(--primary-light);
+}
 /* Estilos para el contenedor del enlace */
 .location a {
     text-decoration: none;
@@ -619,7 +622,7 @@ header {
 .road-hero {
     position: relative;
     width: 100%;
-    height: calc(100vh - 100px); /* Reduce 100px en total (50px arriba y 50px abajo) */
+    height: calc(50vh - 50px); /* Reduce 100px en total (50px arriba y 50px abajo) */
     background-image: url("https://systemx.com.mx/LEAD_Project/assets/fondocarretera.png");
     background-size: cover;
     background-position: center;
@@ -631,11 +634,11 @@ header {
 }
 
 .text-container {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.785);
     padding: 2rem;
     border-radius: 10px;
     width: 90%; 
-    max-width: 1200px; 
+    max-width: 1000px; 
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -644,8 +647,8 @@ header {
 }
 
 .text-container p {
-    color: white;
-    font-size: clamp(1rem, 2vw, 1.8rem); /* Tamaño de fuente responsive */
+    color: var(--primary-dark);
+    font-size: 2.5em;
     margin: 0;
     flex: 1;
     min-width: 280px; /* Asegura un ancho mínimo antes de envolver */
@@ -1100,5 +1103,32 @@ footer {
         flex-direction: column;
         align-items: center;
         gap: 10px;
+    }
+}
+
+/* Ajustes para el nuevo layout */
+.bg-primary-light {
+    background-color: var(--primary-light);
+}
+
+/* Ajustes para mantener los estilos existentes en el nuevo layout */
+.history-cta {
+    padding: 60px 20px; /* Reducido el padding para ajustarse mejor al nuevo layout */
+}
+
+.location {
+    padding: 30px;
+    background-color: transparent;
+}
+
+/* Ajustes responsivos */
+@media (max-width: 768px) {
+    .row {
+        flex-direction: column;
+    }
+    
+    .col-md-8, .col-md-4 {
+        width: 100%;
+        padding: 15px;
     }
 }
