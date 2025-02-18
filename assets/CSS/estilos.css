@@ -695,11 +695,7 @@ footer {
     padding: 50px;
 }
 
-.footer-content {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
+
 
 .lead-international ul {
     margin-top: 0;
@@ -1258,4 +1254,21 @@ footer {
     .lead-hero-cta h2 {
         font-size: 2.5em;
     }
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+
+.footer-content .lead-international {
+    order: 1; /* Coloca LEAD INTERNATIONAL al inicio */
+    justify-self: start;
+}
+
+.footer-content .contact {
+    order: 3; /* Coloca CONTACTO al final */
+    justify-self: end;
 }

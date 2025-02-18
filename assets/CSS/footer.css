@@ -1,0 +1,147 @@
+/* footer.css */
+
+/* Variables */
+:root {
+    --primary-dark: #286217;
+    --primary-light: #5cb439;
+}
+
+/* Main Footer Styles */
+footer {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 50px;
+}
+
+/* Footer Content Grid Layout */
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* LEAD International Section */
+.footer-content .lead-international {
+    order: 1;
+    justify-self: start;
+}
+
+/* Contact Section */
+.footer-content .contact {
+    order: 3;
+    justify-self: end;
+}
+
+/* Common Section Styles */
+.footer-content .section-content {
+    margin-bottom: 20px;
+}
+
+.footer-content .section-content strong {
+    display: block;
+    color: white;
+    margin-bottom: 20px;
+    font-family: 'Poppins Bold', sans-serif;
+}
+
+.footer-content .section-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content .section-content li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.footer-content .section-content a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content .section-content a:hover {
+    color: white;
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    background-color: var(--primary-dark);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer-bottom .institution p {
+    margin: 0;
+    font-style: italic;
+}
+
+.footer-bottom .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-bottom .footer-nav li {
+    cursor: pointer;
+}
+
+.footer-bottom .footer-nav img {
+    height: 24px;
+    width: auto;
+    transition: opacity 0.3s ease;
+}
+
+.footer-bottom .footer-nav img:hover {
+    opacity: 0.8;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content > div {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0;
+    }
+
+    .footer-content > div:last-child {
+        border-bottom: none;
+    }
+
+    /* Collapsible Content */
+    .section-content {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.3s ease-out;
+        padding: 0 1rem;
+    }
+
+    .section-content.expanded {
+        max-height: 1000px;
+        padding: 1rem;
+        padding-top: 0;
+    }
+
+    /* Mobile Footer Bottom */
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-bottom .footer-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
