@@ -135,7 +135,7 @@ header {
 .main-nav::after {
     content: '';
     position: absolute;
-    width: 88%;
+    width: 92.5%;
     height: 2px;
     background-color: #fff;
     left: 50%;
@@ -214,8 +214,8 @@ header {
 
 .hero-cta button {
     background-color: transparent;
-    border: 2px solid #000;
-    color: #000;
+    border: 2px solid var(--primary-light);
+    color: var(--primary-light);
     padding: 10px 30px;
     font-weight: bold;
     cursor: pointer;
@@ -246,7 +246,7 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr) 2fr;
     grid-template-rows: auto auto;
-    column-gap: 100px; 
+    column-gap: 30px; 
     row-gap: 30px;  
     grid-template-areas: 
         ". . reuniones"
@@ -323,7 +323,7 @@ header {
 
 .numbers h2 {
     margin: 0;
-    font-size: 44px;
+    font-size: 35px;
     margin-right: 5px;
     font-family: 'Poppins Medium', sans-serif;
 }
@@ -336,7 +336,7 @@ header {
     grid-area: reuniones;
     background-color: rgba(255, 255, 255, 0.1);
     padding: 30px;
-    margin-left: 30px;
+    margin-left: 130px; /* Aumentado de 30px a 100px para más espacio */
     margin-bottom: -100px;
     border-top: 7px solid white;
     border-left: 3px solid white;
@@ -363,7 +363,7 @@ header {
 .reuniones h3 {
     text-align: center;
     margin-bottom: 20px;
-    font-size: 25px;
+    font-size: 20px;
 }
 
 .reuniones hr {
@@ -1012,7 +1012,7 @@ footer {
 .main-header {
     display: flex;
     align-items: flex-start; /* Cambiado de center a flex-start para eliminar espacio extra */
-    padding: 10px 40px;
+    padding: 10px 10px;
     background-color: var(--primary-light);
     gap: 20px; /* Añadido gap para espacio entre logo y divisor */
 }

@@ -16,15 +16,15 @@
 
     <nav class="main-nav">
         <ul>
-            <li><a href="whosLEAD.php"><strong>¿Qué es Lead?</strong></a></li>
-            <li><a href="consejoDirectivo.php"><strong>Consejo Directivo</strong></a></li>
-            <li><a href="staffLEAD.php"><strong>Staff</strong></a></li>
-            <li><a href="publicaciones.php"><strong>Publicaciones</strong></a></li>
-            <li><a href="mediateca.php"><strong>Mediateca</strong></a></li>
-            <li><a href="asociados.php"><strong>Asociados</strong></a></li>
+            <li><a href="whosLEAD.php">¿Qué es Lead?</a></li>
+            <li><a href="consejoDirectivo.php">Consejo Directivo</a></li>
+            <li><a href="staffLEAD.php">Staff</a></li>
+            <li><a href="publicaciones.php">Publicaciones</a></li>
+            <li><a href="mediateca.php">Mediateca</a></li>
+            <li><a href="asociados.php">Asociados</a></li>
             <li>
                 <a href="assets\archivosPDF\SolicitudIngreso\ApplicationFormCohort16.doc.pdf" download>
-                    <strong>Solicitud de ingreso</strong>
+                    Solicitud de ingreso
                 </a>
             </li>
         </ul>
