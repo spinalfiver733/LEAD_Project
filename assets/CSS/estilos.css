@@ -526,6 +526,8 @@ header {
     color: var(--primary-dark);
     text-align: center;
     padding: 5px;
+    font-size: 1.3em;
+    border-radius: 10px;
 }
 
 .top-nav ul li,
@@ -748,7 +750,7 @@ footer {
 }
 
 .history-cta h2 {
-    color: white;
+    color: var(--primary-dark);
     font-size: 2.5em;
     margin-bottom: 30px;
     font-size: 80px;
@@ -756,13 +758,14 @@ footer {
 }
 
 .history-cta button {
-    background-color: transparent;
-    border: 2px solid white;
-    color: white;
+    background-color: #83C868;
+    color: #ffffff;
+    border: none;
     padding: 10px 30px;
-    font-size: 1em;
+    font-size: 1.5em;
     cursor: pointer;
     transition: all 0.3s ease;
+    border-radius: 10px;
 }
 
 .history-cta button:hover {

@@ -144,7 +144,7 @@
                     <div class="separator"></div>
                     <section class="history-cta">
                         <h2><strong>Conoce la historia <br> de LEAD México</strong></h2>
-                        <button>CONSULTAR</button>
+                        <button><strong>CONSULTAR</strong></button>
                     </section>
                 </div>
 
