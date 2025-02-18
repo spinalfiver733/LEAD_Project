@@ -140,7 +140,7 @@
         <div class="container-fluid bg-primary-light">
         <div class="row g-0">
     <!-- Sección Historia - 8 columnas -->
-    <div class="col-md-8 lead-hero-section" style="background-image: url('assets/WEBP/Hoja\ verde.png'); background-size: 60%;margin-top:20px;background-position: left center; background-repeat: no-repeat;">
+    <div class="col-md-8 lead-hero-section" style="margin-top:40px;background-image: url('assets/WEBP/Hojaverde.png'); background-size: 60%; background-position: left center; background-repeat: no-repeat;">
         <div class="lead-hero-overlay">
             <div class="lead-hero-content">
                 <section class="lead-hero-cta">

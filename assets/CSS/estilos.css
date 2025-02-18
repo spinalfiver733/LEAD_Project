@@ -579,6 +579,34 @@ header {
     margin: 0 auto;
 }
 
+.footer-bottom {
+    background-color: #286217;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+.footer-bottom .institution p {
+    margin: 0;
+    font-style: italic;
+}
+
+.footer-bottom .footer-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.footer-bottom .footer-nav li {
+    cursor: pointer;
+}
+
+
 /* CTA Section */
 .cta {
     background-color: var(--primary-light);
@@ -660,12 +688,60 @@ header {
     color: #1d4d25;
     font-size: 2.5rem;
 }
+/* Footer */
+footer {
+    background-color: var(--primary-dark);
+    color: white;
+    padding: 50px;
+}
 
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
 
 .lead-international ul {
     margin-top: 0;
 }
 
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Estilos comunes para ambas secciones */
+.footer-content .section-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-content .section-content li {
+    margin-bottom: 15px;
+    color: rgba(255, 255, 255, 0.7); /* Color semi-transparente para el texto */
+}
+
+.footer-content .section-content li:first-child {
+    margin-bottom: 20px;
+}
+
+.footer-content .section-content li strong {
+    color: white; /* Color blanco para los títulos */
+    display: block;
+    margin-bottom: 5px;
+}
+
+.footer-content .section-content a {
+    color: rgba(255, 255, 255, 0.7);
+    text-decoration: none;
+}
+
+/* Ajustes específicos para la sección de contacto */
+.footer-content .contact li {
+    line-height: 1.5;
+}
 
 .history-cta {
     background-color: var(--primary-light);
@@ -843,6 +919,10 @@ header {
         grid-template-columns: 1fr;
     }
 
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
 
     /* Image Grid */
     .image-grid {
@@ -864,6 +944,19 @@ header {
 }
 
 @media screen and (max-width: 768px) {
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-content > div {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        padding: 0; /* Eliminamos el padding base */
+    }
+
+    .footer-content > div:last-child {
+        border-bottom: none; /* Elimina el borde de la última sección */
+    }
+
     /* Contenido colapsable */
     .section-content {
         max-height: 0;
@@ -907,6 +1000,18 @@ header {
         border-bottom: none !important;
     }
 
+    /* Ajustes al footer bottom en mobile */
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .footer-bottom .footer-nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1rem;
+    }
 }
 
 /* Ajustes para el header principal */
@@ -1048,7 +1153,7 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(92, 180, 57, 0.1);
+    background-color: rgba(92, 180, 57, 0.3);
 }
 
 .lead-hero-content {
@@ -1062,8 +1167,6 @@ header {
 .lead-hero-cta {
     text-align: center;
     padding: 2rem;
-    margin-top: 120px;
-    margin-left: 260px;
 }
 
 .lead-hero-cta h2 {
@@ -1072,6 +1175,8 @@ header {
     margin-bottom: 30px;
     font-family: 'DaxBold', sans-serif;
     line-height: 1.2;
+    margin-top: 120px;
+    margin-left: 150px;
 }
 
 .lead-hero-button {
