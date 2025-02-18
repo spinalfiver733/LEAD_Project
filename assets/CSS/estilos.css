@@ -416,6 +416,10 @@ header {
     -ms-white-space: nowrap; /* Soporte para IE/Edge */
 }
 
+.card p{
+    font-size: 1.5em;
+}
+
 /* Forzamos el estilo incluso con mayor especificidad */
 .info-cards .card h3 {
     white-space: nowrap !important;
@@ -673,7 +677,7 @@ header {
 .road-hero {
     position: relative;
     width: 100%;
-    height: calc(100vh - 100px); /* Reduce 100px en total (50px arriba y 50px abajo) */
+    height: calc(60vh - 60px); /* Reduce 100px en total (50px arriba y 50px abajo) */
     background-image: url("https://systemx.com.mx/LEAD_Project/assets/fondocarretera.png");
     background-size: cover;
     background-position: center;
@@ -685,7 +689,7 @@ header {
 }
 
 .text-container {
-    background: rgba(0, 0, 0, 0.3);
+    background: rgba(255, 255, 255, 0.645);
     padding: 2rem;
     border-radius: 10px;
     width: 90%; 
@@ -699,13 +703,25 @@ header {
 
 .text-container p {
     color: white;
-    font-size: clamp(1rem, 2vw, 1.8rem); /* Tamaño de fuente responsive */
+    font-size:3.1em;
     margin: 0;
     flex: 1;
     min-width: 280px; /* Asegura un ancho mínimo antes de envolver */
     text-align: center; /* Centrado para todos los tamaños */
     line-height: 1.3;
+    color: var(--primary-dark);
 }
+/*
+.text-container p {
+    color: white;
+    font-size: clamp(1rem, 2vw, 1.8rem); 
+    margin: 0;
+    flex: 1;
+    min-width: 280px; 
+    text-align: center; 
+    line-height: 1.3;
+}
+*/
 
 .lead-button {
     display: flex;

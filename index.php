@@ -117,7 +117,7 @@
                 <p><strong>El Colegio de México</strong></p>
             </div>
         </section>
-
+        <!---
         <section class="road-hero">
             <div class="text-container">
                 <p>En el marco de la conferencia de las Naciones Unidas para el Medio Ambieinte y el Desarrollo, o como se ha denominado, "La Cumbre de la Tierra", que se celebró en Río de Janeiro en 1992, se creó el Programa LEAD.</p>
@@ -127,6 +127,13 @@
                     </div>
                     <span>EXPERIMENTA LEAD</span>
                 </div>
+            </div>
+        </section>
+-->
+
+        <section class="road-hero">
+            <div class="text-container">
+                <p>En el marco de la conferencia de las Naciones Unidas para el Medio Ambieinte y el Desarrollo, o como se ha denominado, "La Cumbre de la Tierra", que se celebró en Río de Janeiro en 1992, se creó el Programa LEAD.</p>
             </div>
         </section>
 
