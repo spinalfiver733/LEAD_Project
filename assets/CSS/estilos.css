@@ -1135,3 +1135,127 @@ footer {
         padding: 15px;
     }
 }
+
+.row.g-0 {
+    min-height: 400px;
+}
+
+.lead-hero-section {
+    position: relative;
+    height: 100%;
+    min-height: 400px;
+    background-color: var(--primary-light);
+}
+
+.lead-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(92, 180, 57, 0.1);
+}
+
+.lead-hero-content {
+    position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.lead-hero-cta {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 120px;
+    margin-left: 260px;
+}
+
+.lead-hero-cta h2 {
+    color: var(--primary-dark);
+    font-size: 4em;
+    margin-bottom: 30px;
+    font-family: 'DaxBold', sans-serif;
+    line-height: 1.2;
+}
+
+.lead-hero-button {
+    background-color: #83C868;
+    color: white;
+    border: none;
+    padding: 10px 30px;
+    font-size: 1.2em;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.lead-hero-button:hover {
+    background-color: white;
+    color: var(--primary-light);
+}
+
+/* Sección Ubicación */
+.lead-location-section {
+    background-color: var(--primary-light);
+    height: 100%;
+    min-height: 400px;
+}
+
+.lead-location {
+    padding: 30px;
+    height: 100%;
+}
+
+.lead-location__title {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.lead-location__info {
+    background-color: white;
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    transition: background-color 0.3s ease;
+}
+
+.lead-location__icon {
+    width: 48px;
+    height: 48px;
+    margin-right: 1rem;
+}
+
+.lead-location__address {
+    color: #1d4d25;
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+.lead-location__map {
+    border-radius: 15px;
+    overflow: hidden;
+    height: 300px;
+}
+
+.lead-location__map iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.lead-location__info:hover {
+    background-color: #dcdcdc;
+}
+
+@media (max-width: 768px) {
+    .lead-hero-section,
+    .lead-location-section {
+        min-height: 300px;
+    }
+
+    .lead-hero-cta h2 {
+        font-size: 2.5em;
+    }
+}

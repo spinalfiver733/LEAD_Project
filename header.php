@@ -5,7 +5,7 @@
         </a>
         <div class="divisor">
             <div class="search-container">
-                <input type="search" placeholder="Buscar...">
+            <input type="search" placeholder="Buscar..." style="color: #286217;">
                 <img src="assets/busqueda-de-lupa.svg" alt="buscar" class="search-icon">
             </div>
             <div class="texto-lead">

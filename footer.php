@@ -65,11 +65,13 @@
         </div>
         <nav class="footer-nav">
             <ul>
-                <li>Ciudad de México</li>
                 <li>Aviso de privacidad</li>
                 <li>Copyright</li>
-                <li>Mapa del sitio</li>
                 <li>Cómo llegar</li>
+                <li><img src="assets\WEBP\Facebook.webp" alt=""></li>
+                <li><img src="assets\WEBP\Instagram.webp" alt=""></li>
+                <li><img src="assets\WEBP\X.webp" alt=""></li>
+
             </ul>
         </nav>
     </div>
