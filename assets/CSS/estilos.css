@@ -85,10 +85,10 @@ header {
     border: none;
 }
 
-/* Mantenemos el estilo original para la imagen del logo */
 .main-header img {
+    width: 300px;
     height: auto;
-    width: 200px;
+    display: block; /* Elimina espacio extra debajo de la imagen */
 }
 
 /* Nuevo estilo específico para la imagen del texto */
@@ -97,14 +97,13 @@ header {
     height: auto;
 }
 
+
+
 /* Aseguramos que el contenedor tenga suficiente espacio */
 .main-header {
     background-color: var(--primary-light);
     padding: 0px 30px;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px; /* Añadimos un espacio entre las imágenes */
 }
 
 .logo-container h1 {
@@ -153,9 +152,8 @@ header {
 .main-nav li {
     color: white;
     cursor: pointer;
-    font-size: 25px;
     text-transform: uppercase;
-    font-weight: lighter;
+    font-size: 1.2em;
 }
 
 /* Hero Section */
@@ -189,20 +187,19 @@ header {
 .lead-header {
     text-align: center;
     margin-bottom: 30px;
-    margin-top: 30px;
     background-color: #e6e6e6;
 }
 
 .lead-header h1 {
-    color: var(--primary-dark);
-    font-size: 3.2em;
+    color: var(--primary-light);
+    font-size: 2.58em;
     margin-bottom: 5px;
     font-family: 'DaxBold', sans-serif;
 }
 
 .lead-header p {
-    color: var(--primary-dark);
-    font-size: 2em;
+    color: var(--primary-light);
+    font-size: 1.55em;
     font-family: 'DaxBold', sans-serif;
     margin:0px;
 }
@@ -213,8 +210,8 @@ header {
 
 .hero-cta button {
     background-color: transparent;
-    border: 2px solid var(--primary-light);
-    color: var(--primary-light);
+    border: 2px solid #000;
+    color: #000;
     padding: 10px 30px;
     font-weight: bold;
     cursor: pointer;
@@ -245,15 +242,12 @@ header {
     display: grid;
     grid-template-columns: repeat(2, 1fr) 2fr;
     grid-template-rows: auto auto;
-    gap: 30px 15px;  /* row-gap column-gap */
+    column-gap: 100px; 
+    row-gap: 30px;  
     grid-template-areas: 
         ". . reuniones"
         "programa consejo reuniones"
         "stats stats reuniones";
-    /* Agregar margen específico a la columna de reuniones */
-    & > .reuniones {
-        margin-left: 200px; /* Aumenta este valor para más espacio */
-    }
 }
 
 .info-cards .card:nth-child(1) {
@@ -268,12 +262,11 @@ header {
     width: 100%;
     display: flex;
     justify-content: center;
-    padding: 40px 0; /* Opcional: para dar algo de espacio arriba y abajo */
-    margin-bottom: 10px;
+    padding: 20px 0; /* Opcional: para dar algo de espacio arriba y abajo */
 }
 
 .img-collage {
-    width: 80%;
+    width: 74.5%;
     display: flex;
     justify-content: center;
 }
@@ -392,8 +385,8 @@ header {
 
 .card {
     background-color: white;
-    padding: 80px;
-    border-radius: 10px;
+    padding: 30px;
+    border-radius: 5px;
     width: 100%;
     min-height: 150px;
     display: flex;
@@ -414,10 +407,6 @@ header {
     -webkit-white-space: nowrap; /* Soporte para Safari */
     -moz-white-space: nowrap; /* Soporte para Firefox */
     -ms-white-space: nowrap; /* Soporte para IE/Edge */
-}
-
-.card p{
-    font-size: 1.5em;
 }
 
 /* Forzamos el estilo incluso con mayor especificidad */
@@ -482,9 +471,7 @@ header {
 .info_ubicacion:hover {
     background-color: #dcdcdc; /* Cambio sutil de color al pasar el mouse */
 }
-.location{
-    background-color: #5cb439;
-}
+
 /* Estilos para el contenedor del enlace */
 .location a {
     text-decoration: none;
@@ -501,55 +488,6 @@ header {
 /* Mantener el color del texto consistente */
 .location a p {
     color: #1d4d25 !important;
-}
-
-.bg-primary-light {
-    background-color: var(--primary-light);
-}
-
-/* Ajustes para mantener los estilos existentes en el nuevo layout */
-.history-cta {
-    padding: 60px 20px; /* Reducido el padding para ajustarse mejor al nuevo layout */
-}
-
-.location {
-    padding: 30px;
-    background-color: transparent;
-}
-
-.map {
-    border-radius: 10px;
-    overflow: hidden; /* Esto es importante para que el border-radius funcione con el iframe */
-}
-
-.map iframe {
-    border-radius: 10px;
-    width: 100%;
-    height: 300px;
-    border: 0;
-}
-
-.separator {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    width: 2px; /* Grosor de la línea */
-    height: 440px; /* Ajusta la altura según necesites */
-    background-color: white;
-}
-
-
-/* Ajustes responsivos */
-@media (max-width: 768px) {
-    .row {
-        flex-direction: column;
-    }
-    
-    .col-md-8, .col-md-4 {
-        width: 100%;
-        padding: 15px;
-    }
 }
 
 /* Program Cards */
@@ -677,7 +615,7 @@ header {
 .road-hero {
     position: relative;
     width: 100%;
-    height: calc(60vh - 60px); /* Reduce 100px en total (50px arriba y 50px abajo) */
+    height: calc(100vh - 100px); /* Reduce 100px en total (50px arriba y 50px abajo) */
     background-image: url("https://systemx.com.mx/LEAD_Project/assets/fondocarretera.png");
     background-size: cover;
     background-position: center;
@@ -689,7 +627,7 @@ header {
 }
 
 .text-container {
-    background: rgba(255, 255, 255, 0.645);
+    background: rgba(0, 0, 0, 0.3);
     padding: 2rem;
     border-radius: 10px;
     width: 90%; 
@@ -703,25 +641,13 @@ header {
 
 .text-container p {
     color: white;
-    font-size:3.1em;
+    font-size: clamp(1rem, 2vw, 1.8rem); /* Tamaño de fuente responsive */
     margin: 0;
     flex: 1;
     min-width: 280px; /* Asegura un ancho mínimo antes de envolver */
     text-align: center; /* Centrado para todos los tamaños */
     line-height: 1.3;
-    color: var(--primary-dark);
 }
-/*
-.text-container p {
-    color: white;
-    font-size: clamp(1rem, 2vw, 1.8rem); 
-    margin: 0;
-    flex: 1;
-    min-width: 280px; 
-    text-align: center; 
-    line-height: 1.3;
-}
-*/
 
 .lead-button {
     display: flex;
@@ -1075,5 +1001,94 @@ footer {
         flex-wrap: wrap;
         justify-content: center;
         gap: 1rem;
+    }
+}
+
+/* Ajustes para el header principal */
+.main-header {
+    display: flex;
+    align-items: flex-start; /* Cambiado de center a flex-start para eliminar espacio extra */
+    padding: 10px 40px;
+    background-color: var(--primary-light);
+    gap: 20px; /* Añadido gap para espacio entre logo y divisor */
+}
+
+
+.main-header a {
+    flex-shrink: 0;
+}
+
+.main-header img {
+    width: 300px;
+    height: auto;
+}
+
+.divisor {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinea el contenido a la izquierda */
+    flex-grow: 1; /* Hace que ocupe todo el espacio restante */
+    gap: 10px; /* Espacio entre la búsqueda y el texto */
+}
+
+/* Contenedor de búsqueda */
+.search-container {
+    position: relative;
+    width: 200px;
+}
+
+.search-container input {
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: none;
+    width: 100%;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%) scaleX(-1);
+    width: 20px !important;
+    height: 20px;
+}
+
+/* Texto LEAD */
+.texto-lead h1 {
+    color: white;
+    font-size: 3em;
+    margin: 0;
+    text-align: left;
+    width: 100%;
+    white-space: nowrap
+
+}
+
+
+/* Responsive */
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        padding: 15px;
+    }
+    
+    .divisor {
+        align-items: center;
+        width: 100%;
+    }
+    
+    .texto-lead h1 {
+        text-align: center;
+        font-size: 1.2em;
+    }
+    
+    .main-nav {
+        padding: 10px;
+    }
+    
+    .main-nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
     }
 }
