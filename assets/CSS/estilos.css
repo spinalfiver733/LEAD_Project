@@ -191,17 +191,18 @@ header {
     text-align: center;
     margin-bottom: 30px;
     background-color: #e6e6e6;
+    margin-top: 20px;
 }
 
 .lead-header h1 {
-    color: var(--primary-light);
+    color: var(--primary-dark);
     font-size: 2.58em;
     margin-bottom: 5px;
     font-family: 'DaxBold', sans-serif;
 }
 
 .lead-header p {
-    color: var(--primary-light);
+    color: var(--primary-dark);
     font-size: 1.55em;
     font-family: 'DaxBold', sans-serif;
     margin:0px;
